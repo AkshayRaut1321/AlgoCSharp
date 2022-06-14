@@ -1,7 +1,0 @@
-C:\Akshay\Personal\Projects\AlgoCSharp\bin\Debug\AlgoCSharp.exe.config
-C:\Akshay\Personal\Projects\AlgoCSharp\bin\Debug\AlgoCSharp.exe
-C:\Akshay\Personal\Projects\AlgoCSharp\bin\Debug\AlgoCSharp.pdb
-C:\Akshay\Personal\Projects\AlgoCSharp\obj\Debug\AlgoCSharp.csprojAssemblyReference.cache
-C:\Akshay\Personal\Projects\AlgoCSharp\obj\Debug\AlgoCSharp.csproj.CoreCompileInputs.cache
-C:\Akshay\Personal\Projects\AlgoCSharp\obj\Debug\AlgoCSharp.exe
-C:\Akshay\Personal\Projects\AlgoCSharp\obj\Debug\AlgoCSharp.pdb

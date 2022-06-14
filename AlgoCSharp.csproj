@@ -46,6 +46,7 @@
     <Compile Include="Algorithms\BinaryTree\BinaryTree.cs" />
     <Compile Include="Algorithms\BinaryTree\BinaryTreeExample.cs" />
     <Compile Include="Algorithms\BinaryTree\Node.cs" />
+    <Compile Include="Algorithms\SEDOLChecker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

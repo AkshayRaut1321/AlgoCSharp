@@ -1,4 +1,5 @@
-﻿using AlgoCSharp.Algorithms.BinaryTree;
+﻿using AlgoCSharp.Algorithms;
+using AlgoCSharp.Algorithms.BinaryTree;
 using System;
 
 namespace AlgoCSharp
@@ -7,7 +8,10 @@ namespace AlgoCSharp
     {
         static void Main(string[] args)
         {
-            BinaryTreeExample.Run();
+            //BinaryTreeExample.Run();
+            var sedolChecker = new SEDOLChecker();
+            sedolChecker.Test();
+
             Console.Read();
         }
     }
