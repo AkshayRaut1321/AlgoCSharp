@@ -19,7 +19,7 @@ namespace AlgoCSharp.Algorithms
             for (int i = 2; i <= n; i++)
             {
 #if DEBUG
-                Console.WriteLine("Call : " + fibCount++);
+                Console.WriteLine("Iteration : " + fibCount++);
 #endif
                 result = t0 + t1;
                 t0 = t1;

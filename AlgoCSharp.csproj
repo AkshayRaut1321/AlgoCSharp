@@ -46,9 +46,11 @@
     <Compile Include="Algorithms\BinaryTree\BinaryTree.cs" />
     <Compile Include="Algorithms\BinaryTree\BinaryTreeExample.cs" />
     <Compile Include="Algorithms\BinaryTree\Node.cs" />
+    <Compile Include="Algorithms\CombinationPermutation.cs" />
     <Compile Include="Algorithms\Fibonacci.cs" />
     <Compile Include="Algorithms\SEDOLChecker.cs" />
     <Compile Include="Algorithms\PowerFunction.cs" />
+    <Compile Include="Algorithms\TowerOfHanoi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Algorithms\TaylorSeries.cs" />
