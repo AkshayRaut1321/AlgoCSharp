@@ -43,9 +43,9 @@ namespace AlgoCSharp.Algorithms
 
         public static int FibOptimizedRecursionUsingMemoization(int n)
         {
-#if DEBUG
+            #if DEBUG
             Console.WriteLine("Call : " + fibCount++);
-#endif
+            #endif
 
             if (n <= 1)
             {

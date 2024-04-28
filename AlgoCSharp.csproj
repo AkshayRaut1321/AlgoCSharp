@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\ArrayADT\UnsortedArrayADT.cs" />
+    <Compile Include="Algorithms\ArrayADT\SortedArrayADT.cs" />
     <Compile Include="Algorithms\BinaryTree\BinaryTree.cs" />
     <Compile Include="Algorithms\BinaryTree\BinaryTreeExample.cs" />
     <Compile Include="Algorithms\BinaryTree\Node.cs" />
@@ -50,6 +52,7 @@
     <Compile Include="Algorithms\Fibonacci.cs" />
     <Compile Include="Algorithms\SEDOLChecker.cs" />
     <Compile Include="Algorithms\PowerFunction.cs" />
+    <Compile Include="Algorithms\TestDestructor.cs" />
     <Compile Include="Algorithms\TowerOfHanoi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

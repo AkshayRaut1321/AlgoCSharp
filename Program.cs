@@ -1,13 +1,15 @@
 ﻿using AlgoCSharp.Algorithms;
+using AlgoCSharp.Algorithms.ArrayADT;
 using System;
+using System.Threading.Tasks;
 
 namespace AlgoCSharp
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Input: ");
+            //Console.WriteLine("Input: ");
             //BinaryTreeExample.Run();
 
             //var sedolChecker = new SEDOLChecker();
@@ -29,15 +31,16 @@ namespace AlgoCSharp
 
             //Console.WriteLine("Tower of Hanoi: ");
             //TowerOfHanoi.Move(3, "A", "B", "C");
-            Console.WriteLine("Result quiz: " + f(1));
+            //Console.WriteLine("Result quiz: " + f(1));
 
+            SortedArrayADT.FindMissingNumbers(new int[] { 6, 7, 8, 9, 11, 14, 16, 17 });
             Console.Read();
         }
 
         static int i = 1;
 
         static int f(int n)
-        {            
+        {
             if (n >= 5)
                 return n;
 
