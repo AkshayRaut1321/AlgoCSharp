@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\ArrayADT\ArrayADT.cs" />
     <Compile Include="Algorithms\ArrayADT\UnsortedArrayADT.cs" />
     <Compile Include="Algorithms\ArrayADT\SortedArrayADT.cs" />
+    <Compile Include="Algorithms\Array\RemoveInPlaceElement.cs" />
     <Compile Include="Algorithms\BinaryTree\BinaryTree.cs" />
     <Compile Include="Algorithms\BinaryTree\BinaryTreeExample.cs" />
     <Compile Include="Algorithms\BinaryTree\Node.cs" />
