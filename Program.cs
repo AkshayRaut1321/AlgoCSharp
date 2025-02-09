@@ -44,23 +44,36 @@ namespace AlgoCSharp
 
             //RemoveInPlaceElement.RemoveElement(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2);
 
-            ArrayADT arrayADT = new ArrayADT();
-            arrayADT.Start();
+            //ArrayADT arrayADT = new ArrayADT();
+            //arrayADT.Start();
 
-            Console.WriteLine("Enter the number to append");
-            int newItem = Convert.ToInt32(Console.ReadLine());
-            arrayADT.Append(newItem);
+            //Console.WriteLine("Enter the number to append");
+            //int newItem = Convert.ToInt32(Console.ReadLine());
+            //arrayADT.Append(newItem);
 
-            arrayADT.Display();
+            //arrayADT.Display();
 
-            Console.WriteLine("Enter the number to insert");
-            newItem = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the position to insert the number");
-            var insertAt = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter the number to insert");
+            //newItem = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter the position to insert the number");
+            //var insertAt = Convert.ToInt32(Console.ReadLine());
 
-            arrayADT.Insert(newItem, insertAt);
+            //arrayADT.Insert(newItem, insertAt);
 
-            arrayADT.Display();
+            //arrayADT.Display();
+
+            //TwoSumProblem problem = new TwoSumProblem();
+            //var output = problem.TwoSumStoreComplement(new int[] { 1, 3, 4, 2, 4 }, 6);
+            //Console.WriteLine($"{output[0]}, {output[1]}");
+
+            //var output = problem.TwoSumStoreOriginalNumberReturnMultiple(new int[] { 3, 3, 4, 2, 4 }, 6);
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine($"{item[0]}, {item[1]}");
+            //}
+
+            NumberPalindrome numberPalindrome = new NumberPalindrome();
+            Console.WriteLine(numberPalindrome.IsPalindromeReverseOnlyHalf(2112));
 
             Console.Read();
         }
