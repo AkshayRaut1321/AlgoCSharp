@@ -72,8 +72,11 @@ namespace AlgoCSharp
             //    Console.WriteLine($"{item[0]}, {item[1]}");
             //}
 
-            NumberPalindrome numberPalindrome = new NumberPalindrome();
-            Console.WriteLine(numberPalindrome.IsPalindromeReverseOnlyHalf(2112));
+            //NumberPalindrome numberPalindrome = new NumberPalindrome();
+            //Console.WriteLine(numberPalindrome.IsPalindromeReverseOnlyHalf(2112));
+
+            LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+            Console.WriteLine(longestCommonPrefix.Run(new string[] { "flower", "flow", "flight" }));
 
             Console.Read();
         }

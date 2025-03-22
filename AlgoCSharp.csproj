@@ -52,8 +52,10 @@
     <Compile Include="Algorithms\BinaryTree\Node.cs" />
     <Compile Include="Algorithms\CombinationPermutation.cs" />
     <Compile Include="Algorithms\Fibonacci.cs" />
+    <Compile Include="Algorithms\LongestCommonPrefix.cs" />
     <Compile Include="Algorithms\Multithreading\TaskParallelism.cs" />
     <Compile Include="Algorithms\NumberPalindrome.cs" />
+    <Compile Include="Algorithms\RomanToInteger.cs" />
     <Compile Include="Algorithms\SEDOLChecker.cs" />
     <Compile Include="Algorithms\PowerFunction.cs" />
     <Compile Include="Algorithms\TestDestructor.cs" />
