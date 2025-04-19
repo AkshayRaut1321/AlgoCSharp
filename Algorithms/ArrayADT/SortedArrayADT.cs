@@ -128,21 +128,5 @@ namespace AlgoCSharp.Algorithms.ArrayADT
 
             return c;
         }
-
-        public void FindMissingNumbers(int[] numbers)
-        {
-            var diff = numbers[0] - 0;
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i] - i != diff)
-                {
-                    while (diff < numbers[i] - i)
-                    {
-                        Console.WriteLine(i + diff);
-                        diff++;
-                    }
-                }
-            }
-        }
     }
 }

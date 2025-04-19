@@ -2,7 +2,7 @@
 {
     public class LongestCommonPrefix
     {
-        public string Run(string[] strs)
+        public string Run(params string[] strs)
         {
             if (strs == null || strs.Length == 0)
                 return "";

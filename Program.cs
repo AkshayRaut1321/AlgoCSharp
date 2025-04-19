@@ -1,7 +1,4 @@
-﻿using AlgoCSharp.Algorithms;
-using AlgoCSharp.Algorithms.Array;
-using AlgoCSharp.Algorithms.ArrayADT;
-using AlgoCSharp.Algorithms.Multithreading;
+﻿using AlgoCSharp.Algorithms.ArrayADT;
 using System;
 using System.Threading.Tasks;
 
@@ -35,7 +32,7 @@ namespace AlgoCSharp
             //TowerOfHanoi.TOH(2, "A", "B", "C");
             //Console.WriteLine("Result quiz: " + f(1));
 
-            //SortedArrayADT.FindMissingNumbers(new int[] { 6, 7, 8, 9, 11, 14, 16, 17 });
+            //SortedArrayADT.FindMultipleMissingNumbers(new int[] { 6, 7, 8, 9, 11, 14, 16, 17 });
 
             //TaskParallelism.ParallelForWithException();
             //TaskParallelism.CombineResultFromTasks();
@@ -75,8 +72,18 @@ namespace AlgoCSharp
             //NumberPalindrome numberPalindrome = new NumberPalindrome();
             //Console.WriteLine(numberPalindrome.IsPalindromeReverseOnlyHalf(2112));
 
-            LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
-            Console.WriteLine(longestCommonPrefix.Run(new string[] { "flower", "flow", "flight" }));
+            //LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+            //Console.WriteLine(longestCommonPrefix.Run("flower", "flow", "flight"));
+
+            ArrayAlgorithms arrayAlgorithms = new ArrayAlgorithms();
+            //Console.WriteLine(arrayAlgorithms.FindSingleElementMissingBy1PlaceInSortedNaturalNumbersUsingFormula(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12));
+            //arrayAlgorithms.FindSingleElementMissingBy1PlaceInSortedNonNaturalNumbers(6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17);
+            //arrayAlgorithms.FindMultipleMissingNumbersInSortedPositiveIntegers(6, 7, 8, 9, 10, 12, 15, 16, 17);
+            //arrayAlgorithms.FindMultipleMissingNumbersUnsortedPositiveIntegers(new int[] { 3, 7, 4, 9, 12, 6, 1, 11, 2, 10 });
+            //arrayAlgorithms.FindUniqueDuplicatesSortedPositiveIntegers(3, 6, 8, 8, 10, 12, 15, 15, 15, 20);
+            //arrayAlgorithms.CountDuplicatesSortedPositiveIntegersHash(3, 6, 8, 8, 10, 12, 15, 15, 15, 20);
+            //arrayAlgorithms.CountDuplicatesUnsortedPositiveIntegersHash(3, 6, 8, 8, 10, 12, 15, 15, 15, 20);
+            arrayAlgorithms.CountDuplicatesUnsortedPositiveIntegersHash(8, 3, 6, 4, 6, 5, 6, 8, 2, 7);
 
             Console.Read();
         }
