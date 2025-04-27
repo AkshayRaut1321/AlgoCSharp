@@ -1,4 +1,7 @@
-﻿using AlgoCSharp.Algorithms.ArrayADT;
+﻿using AlgoCSharp.Algorithms;
+using AlgoCSharp.Algorithms.ArrayADT;
+using AlgoCSharp.Algorithms.String;
+using AlgoCSharp.LeetCodeProblems;
 using System;
 using System.Threading.Tasks;
 
@@ -59,23 +62,13 @@ namespace AlgoCSharp
 
             //arrayADT.Display();
 
-            //TwoSumProblem problem = new TwoSumProblem();
-            //var output = problem.TwoSumStoreComplement(new int[] { 1, 3, 4, 2, 4 }, 6);
-            //Console.WriteLine($"{output[0]}, {output[1]}");
-
-            //var output = problem.TwoSumStoreOriginalNumberReturnMultiple(new int[] { 3, 3, 4, 2, 4 }, 6);
-            //foreach (var item in output)
-            //{
-            //    Console.WriteLine($"{item[0]}, {item[1]}");
-            //}
-
             //NumberPalindrome numberPalindrome = new NumberPalindrome();
             //Console.WriteLine(numberPalindrome.IsPalindromeReverseOnlyHalf(2112));
 
             //LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
             //Console.WriteLine(longestCommonPrefix.Run("flower", "flow", "flight"));
 
-            ArrayAlgorithms arrayAlgorithms = new ArrayAlgorithms();
+            //ArrayAlgorithms arrayAlgorithms = new ArrayAlgorithms();
             //Console.WriteLine(arrayAlgorithms.FindSingleElementMissingBy1PlaceInSortedNaturalNumbersUsingFormula(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12));
             //arrayAlgorithms.FindSingleElementMissingBy1PlaceInSortedNonNaturalNumbers(6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17);
             //arrayAlgorithms.FindMultipleMissingNumbersInSortedPositiveIntegers(6, 7, 8, 9, 10, 12, 15, 16, 17);
@@ -83,7 +76,43 @@ namespace AlgoCSharp
             //arrayAlgorithms.FindUniqueDuplicatesSortedPositiveIntegers(3, 6, 8, 8, 10, 12, 15, 15, 15, 20);
             //arrayAlgorithms.CountDuplicatesSortedPositiveIntegersHash(3, 6, 8, 8, 10, 12, 15, 15, 15, 20);
             //arrayAlgorithms.CountDuplicatesUnsortedPositiveIntegersHash(3, 6, 8, 8, 10, 12, 15, 15, 15, 20);
-            arrayAlgorithms.CountDuplicatesUnsortedPositiveIntegersHash(8, 3, 6, 4, 6, 5, 6, 8, 2, 7);
+            //arrayAlgorithms.CountDuplicatesUnsortedPositiveIntegersHash(8, 3, 6, 4, 6, 5, 6, 8, 2, 7);
+            //arrayAlgorithms.FindMinMaxWithoutUsingIntMinMax(5, 8, 3, 9, 6, 2, 10, -1, 4);
+
+            //TwoSumProblem problem = new TwoSumProblem();
+            ////var output = problem.TwoSumStoreOriginalNumberSinglePairIndices(new int[] { 3, 3, 4, 2, 4 }, 6);
+            ////var output = problem.TwoSumStoreOriginalNumberSinglePair(new int[] { 3, 3, 4, 2, 4 }, 6);
+            ////var output = problem.TwoSumStoreComplement(new int[] { 1, 3, 4, 2, 4 }, 6);
+            ////var output = problem.TwoSumStoreOriginalNumberReturnMultiplePairIndices(new int[] { 3, 3, 4, 2, 4 }, 6);
+            ////foreach (var item in output)
+            ////{
+            ////    Console.WriteLine($"{item[0]}, {item[1]}");
+            ////}
+            //var output = problem.TwoSumSortedReturnMultiplePairIndices(new int[] { 1, 3, 4, 5, 6, 8, 9, 10, 12, 14 }, 10);
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine($"{item[0]}, {item[1]}");
+            //}
+
+            //ValidParentheses validParentheses = new ValidParentheses();
+            //Console.WriteLine(validParentheses.IsValid("({[])}"));
+
+            //// Creating the first linked list: 1 -> 2 -> 4
+            //ListNode list1 = new ListNode(1);
+            //list1.next = new ListNode(2);
+            //list1.next.next = new ListNode(4);
+
+            //// Creating the second linked list: 1 -> 3 -> 4
+            //ListNode list2 = new ListNode(1);
+            //list2.next = new ListNode(3);
+            //list2.next.next = new ListNode(4);
+
+            //MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
+            //mergeTwoSortedLists.MergeTwoListsByChatGPT(list1, list2);
+
+            StringPalindrome stringPalindrome = new StringPalindrome();
+            //Console.WriteLine(stringPalindrome.IsPalindromeSimple("ABCCBA"));
+            Console.WriteLine(stringPalindrome.IsPalindromeOnlyAlphaNumeric("A man, a plan, a canal: Panama"));
 
             Console.Read();
         }
