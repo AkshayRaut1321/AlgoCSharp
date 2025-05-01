@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Algorithms\ArrayADT\ArrayADT.cs" />
     <Compile Include="Algorithms\ArrayADT\ArrayAlgorithms.cs" />
+    <Compile Include="Algorithms\ArrayADT\BinarySearch.cs" />
+    <Compile Include="Algorithms\ArrayADT\LinearSearch.cs" />
     <Compile Include="Algorithms\ArrayADT\RemoveDuplicatesFromSortedArray.cs" />
     <Compile Include="Algorithms\ArrayADT\UnsortedArrayADT.cs" />
     <Compile Include="Algorithms\ArrayADT\SortedArrayADT.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="Algorithms\BinaryTree\Node.cs" />
     <Compile Include="Algorithms\CombinationPermutation.cs" />
     <Compile Include="Algorithms\Fibonacci.cs" />
+    <Compile Include="Algorithms\String\StringPalindrome.cs" />
     <Compile Include="LeetCodeProblems\LongestCommonPrefix.cs" />
     <Compile Include="Algorithms\Multithreading\TaskParallelism.cs" />
     <Compile Include="Algorithms\NumberPalindrome.cs" />

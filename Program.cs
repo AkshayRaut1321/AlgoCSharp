@@ -110,9 +110,13 @@ namespace AlgoCSharp
             //MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
             //mergeTwoSortedLists.MergeTwoListsByChatGPT(list1, list2);
 
-            StringPalindrome stringPalindrome = new StringPalindrome();
-            //Console.WriteLine(stringPalindrome.IsPalindromeSimple("ABCCBA"));
-            Console.WriteLine(stringPalindrome.IsPalindromeOnlyAlphaNumeric("A man, a plan, a canal: Panama"));
+            //StringPalindrome stringPalindrome = new StringPalindrome();
+            ////Console.WriteLine(stringPalindrome.IsPalindromeSimple("ABCCBA"));
+            //Console.WriteLine(stringPalindrome.IsPalindromeOnlyAlphaNumeric("A man, a plan, a canal: Panama"));
+
+            BinarySearch binarySearch = new BinarySearch();
+            var array = new int[] { 4, 8, 13, 18, 21, 24, 29, 34 };
+            Console.WriteLine(binarySearch.RecursiveBinarySearch(array, 0, array.Length, 18));
 
             Console.Read();
         }
