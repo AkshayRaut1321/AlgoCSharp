@@ -1,5 +1,6 @@
 ﻿using AlgoCSharp.Algorithms;
 using AlgoCSharp.Algorithms.ArrayADT;
+using AlgoCSharp.Algorithms.LinkedList;
 using AlgoCSharp.Algorithms.String;
 using AlgoCSharp.LeetCodeProblems;
 using System;
@@ -114,9 +115,20 @@ namespace AlgoCSharp
             ////Console.WriteLine(stringPalindrome.IsPalindromeSimple("ABCCBA"));
             //Console.WriteLine(stringPalindrome.IsPalindromeOnlyAlphaNumeric("A man, a plan, a canal: Panama"));
 
-            BinarySearch binarySearch = new BinarySearch();
-            var array = new int[] { 4, 8, 13, 18, 21, 24, 29, 34 };
-            Console.WriteLine(binarySearch.RecursiveBinarySearch(array, 0, array.Length, 18));
+            //BinarySearch binarySearch = new BinarySearch();
+            //var array = new int[] { 4, 8, 13, 18, 21, 24, 29, 34 };
+            //Console.WriteLine(binarySearch.RecursiveBinarySearch(array, 0, array.Length, 18));
+
+            //LinkedListProgram linkedListProgram = new LinkedListProgram();
+            //Node node = new Node(10);
+            //node.Next = new Node(20);
+            //node.Next.Next = new Node(30);
+
+            //var foundNode = linkedListProgram.LinearSearchMoveToFirst(node, 20);
+            //Console.WriteLine(foundNode != null ? "Found" : "Not found");
+
+            StringNeedleHaystack searchOccurrence = new StringNeedleHaystack();
+            Console.WriteLine(searchOccurrence.FindFirstOccurrenceOfString("abcabcabc", "cab"));
 
             Console.Read();
         }
