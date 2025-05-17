@@ -4,6 +4,7 @@ using AlgoCSharp.Algorithms.LinkedList;
 using AlgoCSharp.Algorithms.String;
 using AlgoCSharp.LeetCodeProblems;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AlgoCSharp
@@ -119,16 +120,20 @@ namespace AlgoCSharp
             //var array = new int[] { 4, 8, 13, 18, 21, 24, 29, 34 };
             //Console.WriteLine(binarySearch.RecursiveBinarySearch(array, 0, array.Length, 18));
 
-            //LinkedListProgram linkedListProgram = new LinkedListProgram();
-            //Node node = new Node(10);
-            //node.Next = new Node(20);
-            //node.Next.Next = new Node(30);
+            LinkedListProgram linkedListProgram = new LinkedListProgram();
+            Node head = new Node(10);
+            head.Next = new Node(20);
+            head.Next.Next = new Node(30);
+            head.Next.Next.Next = new Node(40);
 
             //var foundNode = linkedListProgram.LinearSearchMoveToFirst(node, 20);
             //Console.WriteLine(foundNode != null ? "Found" : "Not found");
+            linkedListProgram.Insert(head, 3, 35);
 
-            StringNeedleHaystack searchOccurrence = new StringNeedleHaystack();
-            Console.WriteLine(searchOccurrence.FindFirstOccurrenceOfString("abcabcabc", "cab"));
+            //StringNeedleHaystack searchOccurrence = new StringNeedleHaystack();
+            //Console.WriteLine(searchOccurrence.FindFirstOccurrenceOfString("abcabcabc", "cab"));
+            //Console.WriteLine(searchOccurrence.KMPStringIndexSearch("abcabcabc", "cab"));
+            //Console.WriteLine(searchOccurrence.RabinKarpSearch("abcabcabc", "cab"));
 
             Console.Read();
         }

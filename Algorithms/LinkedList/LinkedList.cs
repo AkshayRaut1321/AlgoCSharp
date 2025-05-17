@@ -74,5 +74,28 @@
             }
             return null;
         }
+
+        public void Insert(Node head, int position, int data)
+        {
+            Node newNode = new Node(data);
+            if (position == 0)
+            {
+                newNode.Value = data;
+                head = newNode;
+            }
+            else if (position > 0)
+            {
+                Node iteratorNode = head;
+                for (int iterator = 0; iterator < position - 1 && iteratorNode != null; iterator++)
+                {
+                    iteratorNode = iteratorNode.Next;
+                }
+                if (iteratorNode != null)
+                {
+                    newNode.Next = iteratorNode.Next;
+                    iteratorNode.Next = newNode;
+                }
+            }
+        }
     }
 }
