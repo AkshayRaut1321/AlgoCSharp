@@ -129,12 +129,24 @@ namespace AlgoCSharp
             //var foundNode = linkedListProgram.LinearSearchMoveToFirst(node, 20);
             //Console.WriteLine(foundNode != null ? "Found" : "Not found");
             //linkedListProgram.InsertAt(head, 3, 35);
+            //linkedListProgram.InsertLast(10);
+            //linkedListProgram.InsertLast(20);
+            //linkedListProgram.InsertLast(30);
+            //linkedListProgram.InsertLast(40);
+            //linkedListProgram.InsertLast(50);
+            //linkedListProgram.InsertSorted(45);
+
+            //linkedListProgram.Delete(10);
+            //linkedListProgram.Delete(20);
+            //linkedListProgram.DeleteByValue(50);
+
             linkedListProgram.InsertLast(10);
             linkedListProgram.InsertLast(20);
+            linkedListProgram.InsertLast(20);
             linkedListProgram.InsertLast(30);
-            linkedListProgram.InsertLast(40);
-            linkedListProgram.InsertLast(50);
-            linkedListProgram.InsertSorted(45);
+            linkedListProgram.InsertLast(30);
+            linkedListProgram.InsertLast(30);
+            linkedListProgram.RemoveDuplicatesFromSorted();
 
             //StringNeedleHaystack searchOccurrence = new StringNeedleHaystack();
             //Console.WriteLine(searchOccurrence.FindFirstOccurrenceOfString("abcabcabc", "cab"));

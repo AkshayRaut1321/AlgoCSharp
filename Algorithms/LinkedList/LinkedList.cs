@@ -130,8 +130,53 @@
                 {
                     previousNode.Next = newNode;
                     newNode.Next = traverseNode;
+                    break;
                 }
                 previousNode = traverseNode;
+                traverseNode = traverseNode.Next;
+            }
+        }
+
+        public void DeleteByValue(int data)
+        {
+            Node previousNode = First;
+            Node traverseNode = First.Next;
+
+            if (First.Value == data)
+            {
+                First = First.Next;
+                return;
+            }
+
+            while (traverseNode != null)
+            {
+                if (traverseNode.Value == data)
+                {
+                    previousNode.Next = traverseNode.Next;
+                    if (previousNode.Next == null)
+                        Last = previousNode;
+                    break;
+                }
+                previousNode = traverseNode;
+                traverseNode = traverseNode.Next;
+            }
+        }
+
+        public void RemoveDuplicatesFromSorted()
+        {
+            Node previousNode = First;
+            Node traverseNode = First.Next;
+
+            while (traverseNode != null)
+            {
+                if (previousNode.Value == traverseNode.Value)
+                {
+                    previousNode.Next = traverseNode.Next;
+                }
+                else
+                {
+                    previousNode = traverseNode;
+                }
                 traverseNode = traverseNode.Next;
             }
         }
