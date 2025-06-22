@@ -121,14 +121,19 @@ namespace AlgoCSharp
             //Console.WriteLine(binarySearch.RecursiveBinarySearch(array, 0, array.Length, 18));
 
             LinkedListProgram linkedListProgram = new LinkedListProgram();
-            Node head = new Node(10);
-            head.Next = new Node(20);
-            head.Next.Next = new Node(30);
-            head.Next.Next.Next = new Node(40);
+            //linkedListProgram.First = new Node(10);
+            //linkedListProgram.First.Next = new Node(20);
+            //linkedListProgram.First.Next.Next = new Node(30);
+            //linkedListProgram.First.Next.Next.Next = new Node(40);
 
             //var foundNode = linkedListProgram.LinearSearchMoveToFirst(node, 20);
             //Console.WriteLine(foundNode != null ? "Found" : "Not found");
-            linkedListProgram.Insert(head, 3, 35);
+            //linkedListProgram.InsertAt(head, 3, 35);
+            linkedListProgram.InsertLast(10);
+            linkedListProgram.InsertLast(20);
+            linkedListProgram.InsertLast(30);
+            linkedListProgram.InsertLast(40);
+            linkedListProgram.InsertLast(50);
 
             //StringNeedleHaystack searchOccurrence = new StringNeedleHaystack();
             //Console.WriteLine(searchOccurrence.FindFirstOccurrenceOfString("abcabcabc", "cab"));

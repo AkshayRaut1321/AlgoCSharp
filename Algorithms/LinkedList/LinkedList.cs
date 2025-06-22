@@ -13,6 +13,9 @@
 
     public class LinkedListProgram
     {
+        public Node First { get; set; }
+        public Node Last { get; set; }
+
         public Node LinearSearch(Node head, int key)
         {
             if (head == null || head.Value == key)
@@ -75,7 +78,7 @@
             return null;
         }
 
-        public void Insert(Node head, int position, int data)
+        public void InsertAt(Node head, int position, int data)
         {
             Node newNode = new Node(data);
             if (position == 0)
@@ -95,6 +98,23 @@
                     newNode.Next = iteratorNode.Next;
                     iteratorNode.Next = newNode;
                 }
+            }
+        }
+
+        public void InsertLast(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.Value = data;
+
+            if(First == null)
+            {
+                First = newNode;
+                Last = newNode;
+            }
+            else
+            {
+                Last.Next = newNode;
+                Last = newNode;
             }
         }
     }
