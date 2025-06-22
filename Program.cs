@@ -134,6 +134,7 @@ namespace AlgoCSharp
             linkedListProgram.InsertLast(30);
             linkedListProgram.InsertLast(40);
             linkedListProgram.InsertLast(50);
+            linkedListProgram.InsertSorted(45);
 
             //StringNeedleHaystack searchOccurrence = new StringNeedleHaystack();
             //Console.WriteLine(searchOccurrence.FindFirstOccurrenceOfString("abcabcabc", "cab"));

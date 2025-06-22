@@ -104,9 +104,8 @@
         public void InsertLast(int data)
         {
             Node newNode = new Node(data);
-            newNode.Value = data;
 
-            if(First == null)
+            if (First == null)
             {
                 First = newNode;
                 Last = newNode;
@@ -115,6 +114,25 @@
             {
                 Last.Next = newNode;
                 Last = newNode;
+            }
+        }
+
+        public void InsertSorted(int data)
+        {
+            Node newNode = new Node(data);
+
+            Node traverseNode = First;
+            Node previousNode = null;
+
+            while (traverseNode != null)
+            {
+                if (traverseNode.Value > data && previousNode != null)
+                {
+                    previousNode.Next = newNode;
+                    newNode.Next = traverseNode;
+                }
+                previousNode = traverseNode;
+                traverseNode = traverseNode.Next;
             }
         }
     }
