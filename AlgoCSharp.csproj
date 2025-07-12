@@ -59,6 +59,7 @@
     <Compile Include="Algorithms\LinkedList\LinkedList.cs" />
     <Compile Include="Algorithms\String\StringNeedleHaystack.cs" />
     <Compile Include="Algorithms\String\StringPalindrome.cs" />
+    <Compile Include="LeetCodeProblems\BestTimeToBuySellStock.cs" />
     <Compile Include="LeetCodeProblems\LongestCommonPrefix.cs" />
     <Compile Include="Algorithms\Multithreading\TaskParallelism.cs" />
     <Compile Include="Algorithms\NumberPalindrome.cs" />
@@ -78,5 +79,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
