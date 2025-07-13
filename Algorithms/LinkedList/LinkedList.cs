@@ -16,6 +16,8 @@
         public Node First { get; set; }
         public Node Last { get; set; }
 
+        public int Count { get; internal set; }
+
         public Node LinearSearch(Node head, int key)
         {
             if (head == null || head.Value == key)
@@ -99,6 +101,7 @@
                     iteratorNode.Next = newNode;
                 }
             }
+            Count++;
         }
 
         public void InsertLast(int data)
@@ -115,6 +118,7 @@
                 Last.Next = newNode;
                 Last = newNode;
             }
+            Count++;
         }
 
         public void InsertSorted(int data)
@@ -135,6 +139,7 @@
                 previousNode = traverseNode;
                 traverseNode = traverseNode.Next;
             }
+            Count++;
         }
 
         public void DeleteByValue(int data)
@@ -160,6 +165,7 @@
                 previousNode = traverseNode;
                 traverseNode = traverseNode.Next;
             }
+            Count--;
         }
 
         public void RemoveDuplicatesFromSorted()
@@ -172,6 +178,7 @@
                 if (previousNode.Value == traverseNode.Value)
                 {
                     previousNode.Next = traverseNode.Next;
+                    Count--;
                 }
                 else
                 {
@@ -179,6 +186,84 @@
                 }
                 traverseNode = traverseNode.Next;
             }
+        }
+
+        public void ReverseByElements()
+        {
+            Node traverseNode = First;
+            int i = 0;
+            int[] array = new int[Count];
+
+            while (traverseNode != null)
+            {
+                array[i] = traverseNode.Value;
+                traverseNode = traverseNode.Next;
+                i++;
+            }
+
+            traverseNode = First;
+            i--;
+
+            while (traverseNode != null)
+            {
+                traverseNode.Value = array[i];
+                traverseNode = traverseNode.Next;
+                i--;
+            }
+        }
+
+        public void ReverseByLinks()
+        {
+            // previous will hold the last reversed node
+            Node previous = null;
+
+            // current will point to the node being processed
+            Node current = null;
+
+            // next starts at the head of the list
+            Node next = First;
+
+            // Traverse the list and reverse the links one by one
+            while (next != null)
+            {
+                previous = current;        // Move previous one step forward
+                current = next;            // Move current to the node to process
+                next = next.Next;          // Advance next before breaking the link
+
+                current.Next = previous;   // Reverse the current node's link
+            }
+
+            // Finally, set the head (First) to the new front of the list
+            First = current;
+        }
+
+        public void ReverseUsingTailRecursion(Node previous, Node next)
+        {
+            if (next != null)
+            {
+                ReverseUsingTailRecursion(next, next.Next);
+                next.Next = previous;
+            }
+            else
+            {
+                First = previous;
+            }
+        }
+
+        public Node ReverseUsingPostOrderRecursion(Node head)
+        {
+            // Base case
+            if (head == null || head.Next == null)
+                return head;
+
+            // Recursively reverse the smaller list
+            Node newHead = ReverseUsingPostOrderRecursion(head.Next);
+
+            // Reverse the current node
+            head.Next.Next = head;
+            head.Next = null;
+
+            return newHead;
         }
     }
 }

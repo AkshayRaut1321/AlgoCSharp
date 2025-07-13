@@ -14,7 +14,7 @@ namespace AlgoCSharp.LeetCodeProblems
         }
     }
 
-    public class MergeTwoSortedLists
+    public class MergeTwoSortedLinkedLists
     {
         public ListNode MergeTwoListsByChatGPT(ListNode list1, ListNode list2)
         {

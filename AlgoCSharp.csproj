@@ -69,8 +69,9 @@
     <Compile Include="Algorithms\TestDestructor.cs" />
     <Compile Include="Algorithms\TowerOfHanoi.cs" />
     <Compile Include="Algorithms\ArrayADT\TwoSumProblem.cs" />
-    <Compile Include="LeetCodeProblems\MergeTwoSortedLists.cs" />
+    <Compile Include="LeetCodeProblems\MergeTwoSortedLinkedLists.cs" />
     <Compile Include="LeetCodeProblems\RemoveAllMatchingElements.cs" />
+    <Compile Include="LeetCodeProblems\SearchInsertPositionInSortedArray.cs" />
     <Compile Include="LeetCodeProblems\ValidParentheses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
