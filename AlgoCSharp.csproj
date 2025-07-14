@@ -56,7 +56,9 @@
     <Compile Include="Algorithms\BinaryTree\Node.cs" />
     <Compile Include="Algorithms\CombinationPermutation.cs" />
     <Compile Include="Algorithms\Fibonacci.cs" />
-    <Compile Include="Algorithms\LinkedList\LinkedList.cs" />
+    <Compile Include="Algorithms\LinkedList\CircularLinkedListProgram.cs" />
+    <Compile Include="Algorithms\LinkedList\LinkedListProgram.cs" />
+    <Compile Include="Algorithms\LinkedList\SinglyLinkedList.cs" />
     <Compile Include="Algorithms\String\StringNeedleHaystack.cs" />
     <Compile Include="Algorithms\String\StringPalindrome.cs" />
     <Compile Include="LeetCodeProblems\BestTimeToBuySellStock.cs" />

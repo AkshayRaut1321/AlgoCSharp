@@ -1,29 +1,20 @@
-﻿namespace AlgoCSharp.Algorithms.LinkedList
+﻿using System.Collections.Generic;
+
+namespace AlgoCSharp.Algorithms.LinkedList
 {
-    public class Node
-    {
-        public int Value { get; set; }
-        public Node Next { get; set; }
-
-        public Node(int value)
-        {
-            Value = value;
-        }
-    }
-
     public class LinkedListProgram
     {
-        public Node First { get; set; }
-        public Node Last { get; set; }
+        public SinglyLinkedList First { get; set; }
+        public SinglyLinkedList Last { get; set; }
 
         public int Count { get; internal set; }
 
-        public Node LinearSearch(Node head, int key)
+        public SinglyLinkedList LinearSearch(SinglyLinkedList head, int key)
         {
             if (head == null || head.Value == key)
                 return head;
 
-            Node current = head.Next;
+            SinglyLinkedList current = head.Next;
             while (current != null)
             {
                 if (current.Value == key)
@@ -33,13 +24,13 @@
             return null;
         }
 
-        public Node LinearSearchTransposition(Node head, int key)
+        public SinglyLinkedList LinearSearchTransposition(SinglyLinkedList head, int key)
         {
             if (head == null || head.Value == key)
                 return head;
 
-            Node previous = head;
-            Node current = previous.Next;
+            SinglyLinkedList previous = head;
+            SinglyLinkedList current = previous.Next;
 
             while (current != null)
             {
@@ -56,14 +47,14 @@
             return null;
         }
 
-        public Node LinearSearchMoveToFirst(Node head, int key)
+        public SinglyLinkedList LinearSearchMoveToFirst(SinglyLinkedList head, int key)
         {
             if (head == null || head.Value == key)
                 return head;
 
-            Node headCopy = head;
-            Node previous = head;
-            Node current = head.Next;
+            SinglyLinkedList headCopy = head;
+            SinglyLinkedList previous = head;
+            SinglyLinkedList current = head.Next;
 
             while (current != null)
             {
@@ -80,9 +71,9 @@
             return null;
         }
 
-        public void InsertAt(Node head, int position, int data)
+        public void InsertAt(SinglyLinkedList head, int position, int data)
         {
-            Node newNode = new Node(data);
+            SinglyLinkedList newNode = new SinglyLinkedList(data);
             if (position == 0)
             {
                 newNode.Value = data;
@@ -90,7 +81,7 @@
             }
             else if (position > 0)
             {
-                Node iteratorNode = head;
+                SinglyLinkedList iteratorNode = head;
                 for (int iterator = 0; iterator < position - 1 && iteratorNode != null; iterator++)
                 {
                     iteratorNode = iteratorNode.Next;
@@ -106,7 +97,7 @@
 
         public void InsertLast(int data)
         {
-            Node newNode = new Node(data);
+            SinglyLinkedList newNode = new SinglyLinkedList(data);
 
             if (First == null)
             {
@@ -123,10 +114,10 @@
 
         public void InsertSorted(int data)
         {
-            Node newNode = new Node(data);
+            SinglyLinkedList newNode = new SinglyLinkedList(data);
 
-            Node traverseNode = First;
-            Node previousNode = null;
+            SinglyLinkedList traverseNode = First;
+            SinglyLinkedList previousNode = null;
 
             while (traverseNode != null)
             {
@@ -144,8 +135,8 @@
 
         public void DeleteByValue(int data)
         {
-            Node previousNode = First;
-            Node traverseNode = First.Next;
+            SinglyLinkedList previousNode = First;
+            SinglyLinkedList traverseNode = First.Next;
 
             if (First.Value == data)
             {
@@ -170,8 +161,8 @@
 
         public void RemoveDuplicatesFromSorted()
         {
-            Node previousNode = First;
-            Node traverseNode = First.Next;
+            SinglyLinkedList previousNode = First;
+            SinglyLinkedList traverseNode = First.Next;
 
             while (traverseNode != null)
             {
@@ -190,7 +181,7 @@
 
         public void ReverseByElements()
         {
-            Node traverseNode = First;
+            SinglyLinkedList traverseNode = First;
             int i = 0;
             int[] array = new int[Count];
 
@@ -215,13 +206,13 @@
         public void ReverseByLinks()
         {
             // previous will hold the last reversed node
-            Node previous = null;
+            SinglyLinkedList previous = null;
 
             // current will point to the node being processed
-            Node current = null;
+            SinglyLinkedList current = null;
 
             // next starts at the head of the list
-            Node next = First;
+            SinglyLinkedList next = First;
 
             // Traverse the list and reverse the links one by one
             while (next != null)
@@ -237,7 +228,7 @@
             First = current;
         }
 
-        public void ReverseUsingTailRecursion(Node previous, Node next)
+        public void ReverseUsingTailRecursion(SinglyLinkedList previous, SinglyLinkedList next)
         {
             if (next != null)
             {
@@ -250,20 +241,56 @@
             }
         }
 
-        public Node ReverseUsingPostOrderRecursion(Node head)
+        public SinglyLinkedList ReverseUsingPostOrderRecursion(SinglyLinkedList head)
         {
             // Base case
             if (head == null || head.Next == null)
                 return head;
 
             // Recursively reverse the smaller list
-            Node newHead = ReverseUsingPostOrderRecursion(head.Next);
+            SinglyLinkedList newHead = ReverseUsingPostOrderRecursion(head.Next);
 
             // Reverse the current node
             head.Next.Next = head;
             head.Next = null;
 
             return newHead;
+        }
+
+        public void CauseLoop()
+        {
+            First.Next.Next.Next.Next = First.Next.Next.Next;
+        }
+
+        public bool HasLoopUsingMemoization()
+        {
+            HashSet<int> ints = new HashSet<int>();
+            SinglyLinkedList traverseNode = First;
+            while (traverseNode != null)
+            {
+                if (ints.Contains(traverseNode.Value))
+                    return true;
+
+                ints.Add(traverseNode.Value);
+                traverseNode = traverseNode.Next;
+            }
+            return false;
+        }
+
+        public bool HasLoopUsingSlidingWindow()
+        {
+            SinglyLinkedList tortoise = First;
+            SinglyLinkedList hare = First;
+            do
+            {
+                tortoise = tortoise.Next;
+                hare = hare.Next;
+                if (hare != null)
+                    hare = hare.Next;
+            }
+            while (tortoise != null && hare != null && tortoise != hare);
+
+            return tortoise == hare;
         }
     }
 }

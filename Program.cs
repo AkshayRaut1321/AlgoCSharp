@@ -120,16 +120,16 @@ namespace AlgoCSharp
             //var array = new int[] { 4, 8, 13, 18, 21, 24, 29, 34 };
             //Console.WriteLine(binarySearch.RecursiveBinarySearch(array, 0, array.Length, 18));
 
-            LinkedListProgram linkedListProgram = new LinkedListProgram();
+            //LinkedListProgram linkedListProgram = new LinkedListProgram();
 
             //var foundNode = linkedListProgram.LinearSearchMoveToFirst(node, 20);
             //Console.WriteLine(foundNode != null ? "Found" : "Not found");
             //linkedListProgram.InsertAt(head, 3, 35);
-            linkedListProgram.InsertLast(10);
-            linkedListProgram.InsertLast(20);
-            linkedListProgram.InsertLast(30);
-            linkedListProgram.InsertLast(40);
-            linkedListProgram.InsertLast(50);
+            //linkedListProgram.InsertLast(10);
+            //linkedListProgram.InsertLast(20);
+            //linkedListProgram.InsertLast(30);
+            //linkedListProgram.InsertLast(40);
+            //linkedListProgram.InsertLast(50);
             //linkedListProgram.InsertSorted(45);
             //linkedListProgram.Delete(10);
             //linkedListProgram.Delete(20);
@@ -145,7 +145,25 @@ namespace AlgoCSharp
             //linkedListProgram.ReverseByElements();
             //linkedListProgram.ReverseByLinks();
             //linkedListProgram.ReverseUsingTailRecursion(null, linkedListProgram.First);
-            linkedListProgram.ReverseUsingPostOrderRecursion(linkedListProgram.First);
+            //linkedListProgram.ReverseUsingPostOrderRecursion(linkedListProgram.First);
+
+            //linkedListProgram.CauseLoop();
+            //var hasLoop = linkedListProgram.HasLoopUsingMemoization();
+            //var hasLoop = linkedListProgram.HasLoopUsingSlidingWindow();
+            //Console.WriteLine(hasLoop);
+
+            CircularLinkedListProgram cll = new CircularLinkedListProgram();
+            //cll.Head = new SinglyLinkedList(10);
+            //cll.Head.Next = new SinglyLinkedList(20);
+            //cll.Head.Next.Next = new SinglyLinkedList(30);
+            //cll.Head.Next.Next.Next = cll.Head;
+            cll.InsertAt(0, 10);
+            cll.InsertAt(1, 20);
+            cll.InsertAt(2, 30);
+            cll.InsertAt(3, 40);
+            cll.InsertAt(5, 35);
+            cll.DisplayUsingLoop(cll.Head);
+            //cll.DisplayRecursively(cll.Head);
 
             //StringNeedleHaystack searchOccurrence = new StringNeedleHaystack();
             //Console.WriteLine(searchOccurrence.FindFirstOccurrenceOfString("abcabcabc", "cab"));
