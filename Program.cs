@@ -161,9 +161,12 @@ namespace AlgoCSharp
             cll.InsertAt(1, 20);
             cll.InsertAt(2, 30);
             cll.InsertAt(3, 40);
-            cll.InsertAt(5, 35);
+            cll.InsertAt(3, 35);
             cll.DisplayUsingLoop(cll.Head);
             //cll.DisplayRecursively(cll.Head);
+            cll.DeleteAt(5);
+            Console.WriteLine("After deleting");
+            cll.DisplayUsingLoop(cll.Head);
 
             //StringNeedleHaystack searchOccurrence = new StringNeedleHaystack();
             //Console.WriteLine(searchOccurrence.FindFirstOccurrenceOfString("abcabcabc", "cab"));
