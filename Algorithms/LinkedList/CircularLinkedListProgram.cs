@@ -73,7 +73,7 @@ namespace AlgoCSharp.Algorithms.LinkedList
 
         public void DeleteAt(int position)
         {
-            if (position < 0 || position >= Count)
+            if (position < 0 || position >= Count || Head == null)
                 return;
 
             SinglyLinkedListNode traverseNode = Head;
