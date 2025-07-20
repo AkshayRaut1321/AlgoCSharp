@@ -57,7 +57,9 @@
     <Compile Include="Algorithms\CombinationPermutation.cs" />
     <Compile Include="Algorithms\Fibonacci.cs" />
     <Compile Include="Algorithms\LinkedList\CircularLinkedListProgram.cs" />
-    <Compile Include="Algorithms\LinkedList\LinkedListProgram.cs" />
+    <Compile Include="Algorithms\LinkedList\DoublyLinkedListProgram.cs" />
+    <Compile Include="Algorithms\LinkedList\SinglyLinkedListProgram.cs" />
+    <Compile Include="Algorithms\LinkedList\DoublyLinkedList.cs" />
     <Compile Include="Algorithms\LinkedList\SinglyLinkedList.cs" />
     <Compile Include="Algorithms\String\StringNeedleHaystack.cs" />
     <Compile Include="Algorithms\String\StringPalindrome.cs" />

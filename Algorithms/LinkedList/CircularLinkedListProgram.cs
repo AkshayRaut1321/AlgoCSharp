@@ -34,7 +34,6 @@ namespace AlgoCSharp.Algorithms.LinkedList
         {
             SinglyLinkedListNode traverseNode = Head;
             SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
-            newNode.Value = data;
 
             if (position < 0 || position > Count)
                 return;

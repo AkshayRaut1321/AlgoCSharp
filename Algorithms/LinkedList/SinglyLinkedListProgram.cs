@@ -2,7 +2,7 @@
 
 namespace AlgoCSharp.Algorithms.LinkedList
 {
-    public class LinkedListProgram
+    public class SinglyLinkedListProgram
     {
         public SinglyLinkedListNode First { get; set; }
         public SinglyLinkedListNode Last { get; set; }
@@ -71,17 +71,17 @@ namespace AlgoCSharp.Algorithms.LinkedList
             return null;
         }
 
-        public void InsertAt(SinglyLinkedListNode head, int position, int data)
+        public void InsertAt(int position, int data)
         {
             SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
             if (position == 0)
             {
-                newNode.Value = data;
-                head = newNode;
+                newNode.Next = First;
+                First = newNode;
             }
             else if (position > 0)
             {
-                SinglyLinkedListNode iteratorNode = head;
+                SinglyLinkedListNode iteratorNode = First;
                 for (int iterator = 0; iterator < position - 1 && iteratorNode != null; iterator++)
                 {
                     iteratorNode = iteratorNode.Next;
