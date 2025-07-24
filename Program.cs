@@ -120,16 +120,17 @@ namespace AlgoCSharp
             //var array = new int[] { 4, 8, 13, 18, 21, 24, 29, 34 };
             //Console.WriteLine(binarySearch.RecursiveBinarySearch(array, 0, array.Length, 18));
 
-            //LinkedListProgram linkedListProgram = new LinkedListProgram();
+            SinglyLinkedListProgram sllp = new SinglyLinkedListProgram();
 
             //var foundNode = linkedListProgram.LinearSearchMoveToFirst(node, 20);
             //Console.WriteLine(foundNode != null ? "Found" : "Not found");
             //linkedListProgram.InsertAt(head, 3, 35);
-            //linkedListProgram.InsertLast(10);
-            //linkedListProgram.InsertLast(20);
-            //linkedListProgram.InsertLast(30);
-            //linkedListProgram.InsertLast(40);
-            //linkedListProgram.InsertLast(50);
+            sllp.InsertLast(10);
+            sllp.InsertLast(20);
+            sllp.InsertLast(30);
+            sllp.InsertLast(40);
+            sllp.InsertLast(50);
+            sllp.InsertLast(60);
             //linkedListProgram.InsertSorted(45);
             //linkedListProgram.Delete(10);
             //linkedListProgram.Delete(20);
@@ -151,6 +152,15 @@ namespace AlgoCSharp
             //var hasLoop = linkedListProgram.HasLoopUsingMemoization();
             //var hasLoop = linkedListProgram.HasLoopUsingSlidingWindow();
             //Console.WriteLine(hasLoop);
+            //Console.WriteLine(sllp.GetMiddleNodeTortoiseHare().Value);
+
+            SinglyLinkedListProgram sllp2 = new SinglyLinkedListProgram();
+            sllp2.First = new SinglyLinkedListNode(20);
+            sllp2.First.Next = new SinglyLinkedListNode(10);
+            sllp2.First.Next.Next = sllp.First.Next.Next.Next;
+            //Console.WriteLine(sllp2.FindIntersectingNodeDictionary(sllp.First).Value);
+            //Console.WriteLine(sllp.FindIntersectingNodeLengthAlignment(sllp.First, sllp2.First).Value);
+            Console.WriteLine(sllp.FindIntersectingNodeTortoiseSwitchPath(sllp.First, sllp2.First).Value);
 
             //CircularLinkedListProgram cll = new CircularLinkedListProgram();
             //cll.Head = new SinglyLinkedList(10);
@@ -188,24 +198,24 @@ namespace AlgoCSharp
             //dllp.Reverse();
             //dllp.Display();
 
-            CircularDoublyLinkedListProgram cdllp = new CircularDoublyLinkedListProgram();
-            cdllp.Head = new CircularDoublyLinkedList(10);
-            cdllp.Head.Next = new CircularDoublyLinkedList(20);
-            cdllp.Head.Next.Previous = cdllp.Head;
-            cdllp.Head.Next.Next = new CircularDoublyLinkedList(30);
-            cdllp.Head.Next.Next.Previous = cdllp.Head.Next;
-            cdllp.Head.Next.Next.Next = new CircularDoublyLinkedList(40);
-            cdllp.Head.Next.Next.Next.Previous = cdllp.Head.Next.Next;
-            cdllp.Head.Next.Next.Next.Next = new CircularDoublyLinkedList(50);
-            cdllp.Head.Next.Next.Next.Next.Previous = cdllp.Head.Next.Next.Next;
-            cdllp.Head.Next.Next.Next.Next.Next = cdllp.Head;
-            cdllp.Head.Previous = cdllp.Head.Next.Next.Next.Next;
-            cdllp.Count = 5;
-            cdllp.Display();
-            cdllp.InsertAt(4, 45);
-            cdllp.Display();
-            cdllp.DeleteAt(3);
-            cdllp.Display();
+            //CircularDoublyLinkedListProgram cdllp = new CircularDoublyLinkedListProgram();
+            //cdllp.Head = new CircularDoublyLinkedList(10);
+            //cdllp.Head.Next = new CircularDoublyLinkedList(20);
+            //cdllp.Head.Next.Previous = cdllp.Head;
+            //cdllp.Head.Next.Next = new CircularDoublyLinkedList(30);
+            //cdllp.Head.Next.Next.Previous = cdllp.Head.Next;
+            //cdllp.Head.Next.Next.Next = new CircularDoublyLinkedList(40);
+            //cdllp.Head.Next.Next.Next.Previous = cdllp.Head.Next.Next;
+            //cdllp.Head.Next.Next.Next.Next = new CircularDoublyLinkedList(50);
+            //cdllp.Head.Next.Next.Next.Next.Previous = cdllp.Head.Next.Next.Next;
+            //cdllp.Head.Next.Next.Next.Next.Next = cdllp.Head;
+            //cdllp.Head.Previous = cdllp.Head.Next.Next.Next.Next;
+            //cdllp.Count = 5;
+            //cdllp.Display();
+            //cdllp.InsertAt(4, 45);
+            //cdllp.Display();
+            //cdllp.DeleteAt(3);
+            //cdllp.Display();
 
             //StringNeedleHaystack searchOccurrence = new StringNeedleHaystack();
             //Console.WriteLine(searchOccurrence.FindFirstOccurrenceOfString("abcabcabc", "cab"));

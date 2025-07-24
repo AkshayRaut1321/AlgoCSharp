@@ -96,23 +96,5 @@ namespace AlgoCSharp.Algorithms.LinkedList
                 traverseNode = traverseNode.Next;
             } while (traverseNode != Head && traverseNode != null);
         }
-
-        public void Reverse()
-        {
-            Console.WriteLine("Reversing");
-            CircularDoublyLinkedList traverseNode = Head;
-            while (traverseNode != null)
-            {
-                var temp = traverseNode.Next;
-                traverseNode.Next = traverseNode.Previous;
-                traverseNode.Previous = temp;
-                traverseNode = traverseNode.Previous;
-
-                if (traverseNode != null && traverseNode.Next == null)
-                {
-                    Head = traverseNode;
-                }
-            }
-        }
     }
 }
