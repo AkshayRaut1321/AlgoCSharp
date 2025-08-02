@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace AlgoCSharp.Algorithms.LinkedList
 {
@@ -421,6 +422,15 @@ namespace AlgoCSharp.Algorithms.LinkedList
             }
 
             return null; // No intersection
+        }
+
+        public void Display()
+        {
+            SinglyLinkedListNode traverseNode = First;
+            while (traverseNode != null)
+            {
+                Console.WriteLine(traverseNode.Value);
+            }
         }
     }
 }

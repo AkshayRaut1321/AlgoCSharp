@@ -2,13 +2,13 @@
 
 namespace AlgoCSharp.Algorithms.StackADT
 {
-    public class StackADT<T>
+    public class StackArrayADT<T>
     {
         public int Capacity { get; private set; }
         public int Top { get; private set; }
         private T[] _stackArray;
 
-        public StackADT(int capacity)
+        public StackArrayADT(int capacity)
         {
             Capacity = capacity;
             _stackArray = new T[Capacity];

@@ -230,19 +230,54 @@ namespace AlgoCSharp
             //var maxProfit = a.MaxProfit(new int[] { 7, 1, 4, 3, 6, 5 });
             //Console.WriteLine(maxProfit);
 
-            StackADT<int> intStack = new StackADT<int>(5);
-            intStack.Push(10);
-            intStack.Push(20);
-            intStack.Push(30);
-            intStack.Push(50);
+            //StackArrayADT<int> intStack = new StackArrayADT<int>(5);
+            //intStack.Push(10);
+            //intStack.Push(20);
+            //intStack.Push(30);
+            //intStack.Push(50);
+            //intStack.Push(60);
+            //try
+            //{
+            //    intStack.Push(70);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //Console.WriteLine("All values:");
+            //intStack.Display();
+            //var popElement = intStack.Pop();
+            //Console.WriteLine($"Pop: {popElement}");
+            //Console.WriteLine("All values:");
+            //intStack.Display();
+            //var peekElement = intStack.PeekAt(2);
+            //Console.WriteLine($"Peek: {peekElement}");
+            //intStack.Pop();
+            //intStack.Pop();
+            //intStack.Pop();
+            //intStack.Pop();
+            //try
+            //{
+            //    intStack.Pop();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            StackLinkedListADT linkedlistStack = new StackLinkedListADT(5);
+            linkedlistStack.Push(10);
+            linkedlistStack.Push(20);
+            linkedlistStack.Push(30);
+            linkedlistStack.Push(50);
             Console.WriteLine("All values:");
-            intStack.Display();
-            var popElement = intStack.Pop();
-            Console.WriteLine($"Pop: {popElement}");
+            linkedlistStack.Display();
+            var popLLNElement = linkedlistStack.Pop();
+            Console.WriteLine($"Pop: {popLLNElement}");
             Console.WriteLine("All values:");
-            intStack.Display();
-            var peekElement = intStack.PeekAt(2);
-            Console.WriteLine($"Peek: {peekElement}");
+            linkedlistStack.Display();
+            var peekLLNElement = linkedlistStack.PeekAt(2);
+            Console.WriteLine($"Peek: {peekLLNElement}");
 
             Console.Read();
         }
