@@ -121,17 +121,17 @@ namespace AlgoCSharp
             //var array = new int[] { 4, 8, 13, 18, 21, 24, 29, 34 };
             //Console.WriteLine(binarySearch.RecursiveBinarySearch(array, 0, array.Length, 18));
 
-            SinglyLinkedListProgram sllp = new SinglyLinkedListProgram();
+            //SinglyLinkedListProgram sllp = new SinglyLinkedListProgram();
 
             //var foundNode = linkedListProgram.LinearSearchMoveToFirst(node, 20);
             //Console.WriteLine(foundNode != null ? "Found" : "Not found");
             //linkedListProgram.InsertAt(head, 3, 35);
-            sllp.InsertLast(10);
-            sllp.InsertLast(20);
-            sllp.InsertLast(30);
-            sllp.InsertLast(40);
-            sllp.InsertLast(50);
-            sllp.InsertLast(60);
+            //sllp.InsertLast(10);
+            //sllp.InsertLast(20);
+            //sllp.InsertLast(30);
+            //sllp.InsertLast(40);
+            //sllp.InsertLast(50);
+            //sllp.InsertLast(60);
             //linkedListProgram.InsertSorted(45);
             //linkedListProgram.Delete(10);
             //linkedListProgram.Delete(20);
@@ -265,19 +265,22 @@ namespace AlgoCSharp
             //    Console.WriteLine(ex.Message);
             //}
 
-            StackLinkedListADT linkedlistStack = new StackLinkedListADT(5);
-            linkedlistStack.Push(10);
-            linkedlistStack.Push(20);
-            linkedlistStack.Push(30);
-            linkedlistStack.Push(50);
-            Console.WriteLine("All values:");
-            linkedlistStack.Display();
-            var popLLNElement = linkedlistStack.Pop();
-            Console.WriteLine($"Pop: {popLLNElement}");
-            Console.WriteLine("All values:");
-            linkedlistStack.Display();
-            var peekLLNElement = linkedlistStack.PeekAt(2);
-            Console.WriteLine($"Peek: {peekLLNElement}");
+            //StackLinkedListADT linkedlistStack = new StackLinkedListADT(5);
+            //linkedlistStack.Push(10);
+            //linkedlistStack.Push(20);
+            //linkedlistStack.Push(30);
+            //linkedlistStack.Push(50);
+            //Console.WriteLine("All values:");
+            //linkedlistStack.Display();
+            //var popLLNElement = linkedlistStack.Pop();
+            //Console.WriteLine($"Pop: {popLLNElement}");
+            //Console.WriteLine("All values:");
+            //linkedlistStack.Display();
+            //var peekLLNElement = linkedlistStack.PeekAt(2);
+            //Console.WriteLine($"Peek: {peekLLNElement}");
+
+            ValidParenthesesOnlyRound validParenthesesOnlyRound = new ValidParenthesesOnlyRound();
+            Console.WriteLine(validParenthesesOnlyRound.IsValid("(a+)b(c+d)"));
 
             Console.Read();
         }

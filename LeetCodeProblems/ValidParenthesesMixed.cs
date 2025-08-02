@@ -3,7 +3,7 @@ using System.Text;
 
 namespace AlgoCSharp.LeetCodeProblems
 {
-    public class ValidParentheses
+    public class ValidParenthesesMixed
     {
         public bool IsValidChatGPT(string s)
         {

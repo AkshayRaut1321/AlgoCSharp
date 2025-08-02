@@ -80,7 +80,8 @@
     <Compile Include="LeetCodeProblems\MergeTwoSortedLinkedLists.cs" />
     <Compile Include="LeetCodeProblems\RemoveAllMatchingElements.cs" />
     <Compile Include="LeetCodeProblems\SearchInsertPositionInSortedArray.cs" />
-    <Compile Include="LeetCodeProblems\ValidParentheses.cs" />
+    <Compile Include="LeetCodeProblems\ValidParenthesesOnlyRound.cs" />
+    <Compile Include="LeetCodeProblems\ValidParenthesesMixed.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Algorithms\TaylorSeries.cs" />
