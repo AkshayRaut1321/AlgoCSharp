@@ -63,6 +63,7 @@
     <Compile Include="Algorithms\LinkedList\SinglyLinkedListProgram.cs" />
     <Compile Include="Algorithms\LinkedList\DoublyLinkedList.cs" />
     <Compile Include="Algorithms\LinkedList\SinglyLinkedList.cs" />
+    <Compile Include="Algorithms\StackADT\StackADT.cs" />
     <Compile Include="Algorithms\String\StringNeedleHaystack.cs" />
     <Compile Include="Algorithms\String\StringPalindrome.cs" />
     <Compile Include="LeetCodeProblems\BestTimeToBuySellStock.cs" />

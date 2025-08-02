@@ -1,6 +1,7 @@
 ﻿using AlgoCSharp.Algorithms;
 using AlgoCSharp.Algorithms.ArrayADT;
 using AlgoCSharp.Algorithms.LinkedList;
+using AlgoCSharp.Algorithms.StackADT;
 using AlgoCSharp.Algorithms.String;
 using AlgoCSharp.LeetCodeProblems;
 using System;
@@ -154,13 +155,13 @@ namespace AlgoCSharp
             //Console.WriteLine(hasLoop);
             //Console.WriteLine(sllp.GetMiddleNodeTortoiseHare().Value);
 
-            SinglyLinkedListProgram sllp2 = new SinglyLinkedListProgram();
-            sllp2.First = new SinglyLinkedListNode(20);
-            sllp2.First.Next = new SinglyLinkedListNode(10);
-            sllp2.First.Next.Next = sllp.First.Next.Next.Next;
-            //Console.WriteLine(sllp2.FindIntersectingNodeDictionary(sllp.First).Value);
-            //Console.WriteLine(sllp.FindIntersectingNodeLengthAlignment(sllp.First, sllp2.First).Value);
-            Console.WriteLine(sllp.FindIntersectingNodeTortoiseSwitchPath(sllp.First, sllp2.First).Value);
+            //SinglyLinkedListProgram sllp2 = new SinglyLinkedListProgram();
+            //sllp2.First = new SinglyLinkedListNode(20);
+            //sllp2.First.Next = new SinglyLinkedListNode(10);
+            //sllp2.First.Next.Next = sllp.First.Next.Next.Next;
+            ////Console.WriteLine(sllp2.FindIntersectingNodeDictionary(sllp.First).Value);
+            ////Console.WriteLine(sllp.FindIntersectingNodeLengthAlignment(sllp.First, sllp2.First).Value);
+            //Console.WriteLine(sllp.FindIntersectingNodeTortoiseSwitchPath(sllp.First, sllp2.First).Value);
 
             //CircularLinkedListProgram cll = new CircularLinkedListProgram();
             //cll.Head = new SinglyLinkedList(10);
@@ -228,6 +229,20 @@ namespace AlgoCSharp
             //var maxProfit = a.MaxProfit(new int[] { 2, 4, 1, 2, 3, 4, 3 });
             //var maxProfit = a.MaxProfit(new int[] { 7, 1, 4, 3, 6, 5 });
             //Console.WriteLine(maxProfit);
+
+            StackADT<int> intStack = new StackADT<int>(5);
+            intStack.Push(10);
+            intStack.Push(20);
+            intStack.Push(30);
+            intStack.Push(50);
+            Console.WriteLine("All values:");
+            intStack.Display();
+            var popElement = intStack.Pop();
+            Console.WriteLine($"Pop: {popElement}");
+            Console.WriteLine("All values:");
+            intStack.Display();
+            var peekElement = intStack.PeekAt(2);
+            Console.WriteLine($"Peek: {peekElement}");
 
             Console.Read();
         }

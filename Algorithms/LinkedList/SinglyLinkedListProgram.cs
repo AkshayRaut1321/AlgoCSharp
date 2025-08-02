@@ -4,17 +4,17 @@ namespace AlgoCSharp.Algorithms.LinkedList
 {
     public class SinglyLinkedListProgram
     {
-        public SinglyLinkedSinglyLinkedListNode First { get; set; }
-        public SinglyLinkedSinglyLinkedListNode Last { get; set; }
+        public SinglyLinkedListNode First { get; set; }
+        public SinglyLinkedListNode Last { get; set; }
 
         public int Count { get; internal set; }
 
-        public SinglyLinkedSinglyLinkedListNode LinearSearch(SinglyLinkedSinglyLinkedListNode head, int key)
+        public SinglyLinkedListNode LinearSearch(SinglyLinkedListNode head, int key)
         {
             if (head == null || head.Value == key)
                 return head;
 
-            SinglyLinkedSinglyLinkedListNode current = head.Next;
+            SinglyLinkedListNode current = head.Next;
             while (current != null)
             {
                 if (current.Value == key)
@@ -24,13 +24,13 @@ namespace AlgoCSharp.Algorithms.LinkedList
             return null;
         }
 
-        public SinglyLinkedSinglyLinkedListNode LinearSearchTransposition(SinglyLinkedSinglyLinkedListNode head, int key)
+        public SinglyLinkedListNode LinearSearchTransposition(SinglyLinkedListNode head, int key)
         {
             if (head == null || head.Value == key)
                 return head;
 
-            SinglyLinkedSinglyLinkedListNode previous = head;
-            SinglyLinkedSinglyLinkedListNode current = previous.Next;
+            SinglyLinkedListNode previous = head;
+            SinglyLinkedListNode current = previous.Next;
 
             while (current != null)
             {
@@ -47,14 +47,14 @@ namespace AlgoCSharp.Algorithms.LinkedList
             return null;
         }
 
-        public SinglyLinkedSinglyLinkedListNode LinearSearchMoveToFirst(SinglyLinkedSinglyLinkedListNode head, int key)
+        public SinglyLinkedListNode LinearSearchMoveToFirst(SinglyLinkedListNode head, int key)
         {
             if (head == null || head.Value == key)
                 return head;
 
-            SinglyLinkedSinglyLinkedListNode headCopy = head;
-            SinglyLinkedSinglyLinkedListNode previous = head;
-            SinglyLinkedSinglyLinkedListNode current = head.Next;
+            SinglyLinkedListNode headCopy = head;
+            SinglyLinkedListNode previous = head;
+            SinglyLinkedListNode current = head.Next;
 
             while (current != null)
             {
@@ -73,7 +73,7 @@ namespace AlgoCSharp.Algorithms.LinkedList
 
         public void InsertAt(int position, int data)
         {
-            SinglyLinkedSinglyLinkedListNode newNode = new SinglyLinkedSinglyLinkedListNode(data);
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
             if (position == 0)
             {
                 newNode.Next = First;
@@ -81,7 +81,7 @@ namespace AlgoCSharp.Algorithms.LinkedList
             }
             else if (position > 0)
             {
-                SinglyLinkedSinglyLinkedListNode iteratorNode = First;
+                SinglyLinkedListNode iteratorNode = First;
                 for (int iterator = 0; iterator < position - 1 && iteratorNode != null; iterator++)
                 {
                     iteratorNode = iteratorNode.Next;
@@ -97,7 +97,7 @@ namespace AlgoCSharp.Algorithms.LinkedList
 
         public void InsertLast(int data)
         {
-            SinglyLinkedSinglyLinkedListNode newNode = new SinglyLinkedSinglyLinkedListNode(data);
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
 
             if (First == null)
             {
@@ -114,10 +114,10 @@ namespace AlgoCSharp.Algorithms.LinkedList
 
         public void InsertSorted(int data)
         {
-            SinglyLinkedSinglyLinkedListNode newNode = new SinglyLinkedSinglyLinkedListNode(data);
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
 
-            SinglyLinkedSinglyLinkedListNode traverseNode = First;
-            SinglyLinkedSinglyLinkedListNode previousNode = null;
+            SinglyLinkedListNode traverseNode = First;
+            SinglyLinkedListNode previousNode = null;
 
             while (traverseNode != null)
             {
@@ -135,8 +135,8 @@ namespace AlgoCSharp.Algorithms.LinkedList
 
         public void DeleteByValue(int data)
         {
-            SinglyLinkedSinglyLinkedListNode previousNode = First;
-            SinglyLinkedSinglyLinkedListNode traverseNode = First.Next;
+            SinglyLinkedListNode previousNode = First;
+            SinglyLinkedListNode traverseNode = First.Next;
 
             if (First.Value == data)
             {
@@ -161,8 +161,8 @@ namespace AlgoCSharp.Algorithms.LinkedList
 
         public void RemoveDuplicatesFromSorted()
         {
-            SinglyLinkedSinglyLinkedListNode previousNode = First;
-            SinglyLinkedSinglyLinkedListNode traverseNode = First.Next;
+            SinglyLinkedListNode previousNode = First;
+            SinglyLinkedListNode traverseNode = First.Next;
 
             while (traverseNode != null)
             {
@@ -181,7 +181,7 @@ namespace AlgoCSharp.Algorithms.LinkedList
 
         public void ReverseByElements()
         {
-            SinglyLinkedSinglyLinkedListNode traverseNode = First;
+            SinglyLinkedListNode traverseNode = First;
             int i = 0;
             int[] array = new int[Count];
 
@@ -206,13 +206,13 @@ namespace AlgoCSharp.Algorithms.LinkedList
         public void ReverseByLinks()
         {
             // previous will hold the last reversed node
-            SinglyLinkedSinglyLinkedListNode previous = null;
+            SinglyLinkedListNode previous = null;
 
             // current will point to the node being processed
-            SinglyLinkedSinglyLinkedListNode current = null;
+            SinglyLinkedListNode current = null;
 
             // next starts at the head of the list
-            SinglyLinkedSinglyLinkedListNode next = First;
+            SinglyLinkedListNode next = First;
 
             // Traverse the list and reverse the links one by one
             while (next != null)
@@ -228,7 +228,7 @@ namespace AlgoCSharp.Algorithms.LinkedList
             First = current;
         }
 
-        public void ReverseUsingTailRecursion(SinglyLinkedSinglyLinkedListNode previous, SinglyLinkedSinglyLinkedListNode next)
+        public void ReverseUsingTailRecursion(SinglyLinkedListNode previous, SinglyLinkedListNode next)
         {
             if (next != null)
             {
@@ -241,14 +241,14 @@ namespace AlgoCSharp.Algorithms.LinkedList
             }
         }
 
-        public SinglyLinkedSinglyLinkedListNode ReverseUsingPostOrderRecursion(SinglyLinkedSinglyLinkedListNode head)
+        public SinglyLinkedListNode ReverseUsingPostOrderRecursion(SinglyLinkedListNode head)
         {
             // Base case
             if (head == null || head.Next == null)
                 return head;
 
             // Recursively reverse the smaller list
-            SinglyLinkedSinglyLinkedListNode newHead = ReverseUsingPostOrderRecursion(head.Next);
+            SinglyLinkedListNode newHead = ReverseUsingPostOrderRecursion(head.Next);
 
             // Reverse the current node
             head.Next.Next = head;
@@ -265,7 +265,7 @@ namespace AlgoCSharp.Algorithms.LinkedList
         public bool HasLoopUsingMemoization()
         {
             HashSet<int> ints = new HashSet<int>();
-            SinglyLinkedSinglyLinkedListNode traverseNode = First;
+            SinglyLinkedListNode traverseNode = First;
             while (traverseNode != null)
             {
                 if (ints.Contains(traverseNode.Value))
@@ -279,8 +279,8 @@ namespace AlgoCSharp.Algorithms.LinkedList
 
         public bool HasLoopUsingSlidingWindow()
         {
-            SinglyLinkedSinglyLinkedListNode tortoise = First;
-            SinglyLinkedSinglyLinkedListNode hare = First;
+            SinglyLinkedListNode tortoise = First;
+            SinglyLinkedListNode hare = First;
             do
             {
                 tortoise = tortoise.Next;
@@ -293,10 +293,10 @@ namespace AlgoCSharp.Algorithms.LinkedList
             return tortoise == hare;
         }
 
-        public SinglyLinkedSinglyLinkedListNode GetMiddleNodeBruteForce()
+        public SinglyLinkedListNode GetMiddleNodeBruteForce()
         {
             int count = 0;
-            SinglyLinkedSinglyLinkedListNode traverseNode = First;
+            SinglyLinkedListNode traverseNode = First;
             while (traverseNode != null)
             {
                 traverseNode = traverseNode.Next;
@@ -310,10 +310,10 @@ namespace AlgoCSharp.Algorithms.LinkedList
             return traverseNode;
         }
 
-        public SinglyLinkedSinglyLinkedListNode GetMiddleNodeTortoiseHare()
+        public SinglyLinkedListNode GetMiddleNodeTortoiseHare()
         {
-            SinglyLinkedSinglyLinkedListNode tortoise = First;
-            SinglyLinkedSinglyLinkedListNode hare = First;
+            SinglyLinkedListNode tortoise = First;
+            SinglyLinkedListNode hare = First;
             while (hare != null)
             {
                 hare = hare.Next;
@@ -329,9 +329,9 @@ namespace AlgoCSharp.Algorithms.LinkedList
             return tortoise;
         }
 
-        public SinglyLinkedSinglyLinkedListNode FindIntersectingNodeDictionary(SinglyLinkedSinglyLinkedListNode headA, SinglyLinkedSinglyLinkedListNode headB)
+        public SinglyLinkedListNode FindIntersectingNodeDictionary(SinglyLinkedListNode headA, SinglyLinkedListNode headB)
         {
-            HashSet<SinglyLinkedSinglyLinkedListNode> uniqueNodes = new HashSet<SinglyLinkedSinglyLinkedListNode>();
+            HashSet<SinglyLinkedListNode> uniqueNodes = new HashSet<SinglyLinkedListNode>();
 
             while (headA != null)
             {
@@ -349,7 +349,7 @@ namespace AlgoCSharp.Algorithms.LinkedList
             return null;
         }
 
-        private int GetLength(SinglyLinkedSinglyLinkedListNode head)
+        private int GetLength(SinglyLinkedListNode head)
         {
             int length = 0;
             while (head != null)
@@ -360,7 +360,7 @@ namespace AlgoCSharp.Algorithms.LinkedList
             return length;
         }
 
-        public SinglyLinkedSinglyLinkedListNode FindIntersectingNodeLengthAlignment(SinglyLinkedSinglyLinkedListNode headA, SinglyLinkedSinglyLinkedListNode headB)
+        public SinglyLinkedListNode FindIntersectingNodeLengthAlignment(SinglyLinkedListNode headA, SinglyLinkedListNode headB)
         {
             int lenA = GetLength(headA);
             int lenB = GetLength(headB);
@@ -390,13 +390,13 @@ namespace AlgoCSharp.Algorithms.LinkedList
             return null; // No intersection
         }
 
-        public SinglyLinkedSinglyLinkedListNode FindIntersectingNodeTortoiseSwitchPath(SinglyLinkedSinglyLinkedListNode headA, SinglyLinkedSinglyLinkedListNode headB)
+        public SinglyLinkedListNode FindIntersectingNodeTortoiseSwitchPath(SinglyLinkedListNode headA, SinglyLinkedListNode headB)
         {
             if (headA == null || headB == null)
                 return null;
 
-            SinglyLinkedSinglyLinkedListNode p1 = headA;
-            SinglyLinkedSinglyLinkedListNode p2 = headB;
+            SinglyLinkedListNode p1 = headA;
+            SinglyLinkedListNode p2 = headB;
 
             // After at most 2 passes each, they will either meet or both be null
             while (p1 != p2)
