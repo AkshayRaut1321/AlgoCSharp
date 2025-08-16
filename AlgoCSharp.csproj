@@ -63,6 +63,8 @@
     <Compile Include="Algorithms\LinkedList\SinglyLinkedListProgram.cs" />
     <Compile Include="Algorithms\LinkedList\DoublyLinkedList.cs" />
     <Compile Include="Algorithms\LinkedList\SinglyLinkedList.cs" />
+    <Compile Include="Algorithms\QueueADT\QueueArrayADT.cs" />
+    <Compile Include="Algorithms\StackADT\InfixPostfixConversion.cs" />
     <Compile Include="Algorithms\StackADT\StackLinkedListADT.cs" />
     <Compile Include="Algorithms\StackADT\StackArrayADT.cs" />
     <Compile Include="Algorithms\String\StringNeedleHaystack.cs" />

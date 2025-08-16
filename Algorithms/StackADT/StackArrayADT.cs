@@ -63,7 +63,10 @@ namespace AlgoCSharp.Algorithms.StackADT
             if (IsEmpty)
                 throw new ApplicationException("Stack underflow");
 
-            return _stackArray[Top--];
+            var popped = _stackArray[Top];
+            _stackArray[Top] = default(T);
+            Top--;
+            return popped;
         }
 
         public T PeekAt(int position)

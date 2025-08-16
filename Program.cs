@@ -1,6 +1,7 @@
 ﻿using AlgoCSharp.Algorithms;
 using AlgoCSharp.Algorithms.ArrayADT;
 using AlgoCSharp.Algorithms.LinkedList;
+using AlgoCSharp.Algorithms.QueueADT;
 using AlgoCSharp.Algorithms.StackADT;
 using AlgoCSharp.Algorithms.String;
 using AlgoCSharp.LeetCodeProblems;
@@ -279,8 +280,26 @@ namespace AlgoCSharp
             //var peekLLNElement = linkedlistStack.PeekAt(2);
             //Console.WriteLine($"Peek: {peekLLNElement}");
 
-            ValidParenthesesOnlyRound validParenthesesOnlyRound = new ValidParenthesesOnlyRound();
-            Console.WriteLine(validParenthesesOnlyRound.IsValid("(a+)b(c+d)"));
+            //ValidParenthesesOnlyRound validParenthesesOnlyRound = new ValidParenthesesOnlyRound();
+            //Console.WriteLine(validParenthesesOnlyRound.IsValid("(a+)b(c+d)"));
+
+            //InfixPostfixConversion infixPostfixConversion = new InfixPostfixConversion();
+            //Console.WriteLine(infixPostfixConversion.ConvertOptimized("a+b*c-d/e"));
+            //Console.WriteLine(infixPostfixConversion.ConvertForParenthesized("(a+b)*c-d^e^f"));
+            //var postFix = infixPostfixConversion.ConvertForParenthesized("3*5+6/2-4");
+            //Console.WriteLine(postFix);
+            //Console.WriteLine(infixPostfixConversion.EvaluateParenthesizedExpression(postFix));
+
+            QueueArrayADT<int> queue = new QueueArrayADT<int>(5);
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Display();
+            queue.Dequeue();
+            queue.Dequeue();
+            queue.Dequeue();
+            queue.Enqueue(1);
+            queue.Display();
 
             Console.Read();
         }
