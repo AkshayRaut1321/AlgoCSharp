@@ -2,7 +2,7 @@
 
 namespace AlgoCSharp.Algorithms.QueueADT
 {
-    public class QueueArrayADT<T>
+    public class LinearQueueArrayADT<T>
     {
         public int Capacity { get; private set; }
         public int Front { get; private set; }
@@ -13,7 +13,7 @@ namespace AlgoCSharp.Algorithms.QueueADT
 
         private bool _canResetIfEmpty;
 
-        public QueueArrayADT(int capacity, bool canResetIfEmpty = true)
+        public LinearQueueArrayADT(int capacity, bool canResetIfEmpty = true)
         {
             Capacity = capacity;
             _queueArray = new T[Capacity];
