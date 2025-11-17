@@ -2,18 +2,18 @@
 {
     public class BinaryTreeNode
     {
-        public int data;
+        public int Data;
         public BinaryTreeNode Left;
         public BinaryTreeNode Right;
 
         public BinaryTreeNode(int data)
         {
-            this.data = data;
+            this.Data = data;
         }
 
         public override string ToString()
         {
-            return this.data.ToString();
+            return this.Data.ToString();
         }
     }
 }
