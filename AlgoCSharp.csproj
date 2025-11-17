@@ -52,7 +52,6 @@
     <Compile Include="Algorithms\ArrayADT\SortedArrayADT.cs" />
     <Compile Include="Algorithms\Array\RemoveInPlaceElement.cs" />
     <Compile Include="Algorithms\BinaryTree\BinaryTree.cs" />
-    <Compile Include="Algorithms\BinaryTree\BinaryTreeExample.cs" />
     <Compile Include="Algorithms\BinaryTree\Node.cs" />
     <Compile Include="Algorithms\CombinationPermutation.cs" />
     <Compile Include="Algorithms\GeneralProblems\Fibonacci.cs" />

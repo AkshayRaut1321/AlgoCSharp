@@ -1,5 +1,6 @@
 ﻿using AlgoCSharp.Algorithms;
 using AlgoCSharp.Algorithms.ArrayADT;
+using AlgoCSharp.Algorithms.BinaryTree;
 using AlgoCSharp.Algorithms.LinkedList;
 using AlgoCSharp.Algorithms.QueueADT;
 using AlgoCSharp.Algorithms.StackADT;
@@ -15,9 +16,6 @@ namespace AlgoCSharp
     {
         static async Task Main(string[] args)
         {
-            //Console.WriteLine("Input: ");
-            //BinaryTreeExample.Run();
-
             //var sedolChecker = new SEDOLChecker();
             //sedolChecker.Test();
 
@@ -317,13 +315,17 @@ namespace AlgoCSharp
             //dequeue.DequeueAtRear();
             //dequeue.DequeueAtFront();
             //dequeue.Display();
-            PriorityQueueBucketArrayADT priorityQueue = new PriorityQueueBucketArrayADT(3, 3);
-            priorityQueue.Enqueue(100, 0);
-            priorityQueue.Enqueue(10, 1);
-            priorityQueue.Enqueue(1, 2);
-            priorityQueue.Dequeue();
-            priorityQueue.Dequeue();
-            priorityQueue.Dequeue();
+
+            //PriorityQueueBucketArrayADT priorityQueue = new PriorityQueueBucketArrayADT(3, 3);
+            //priorityQueue.Enqueue(100, 0);
+            //priorityQueue.Enqueue(10, 1);
+            //priorityQueue.Enqueue(1, 2);
+            //priorityQueue.Dequeue();
+            //priorityQueue.Dequeue();
+            //priorityQueue.Dequeue();
+
+            BinaryTree example = new BinaryTree();
+            BinaryTreeNode root = example.Create();
 
             Console.Read();
         }

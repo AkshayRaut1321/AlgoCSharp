@@ -1,12 +1,12 @@
 ﻿namespace AlgoCSharp.Algorithms.BinaryTree
 {
-    public class Node
+    public class BinaryTreeNode
     {
         public int data;
-        public Node left;
-        public Node right;
+        public BinaryTreeNode Left;
+        public BinaryTreeNode Right;
 
-        public Node(int data)
+        public BinaryTreeNode(int data)
         {
             this.data = data;
         }
