@@ -175,5 +175,55 @@ namespace AlgoCSharp.Algorithms.BinaryTree
                 }
             }
         }
+
+        public int Count(BinaryTreeNode binaryTreeNode)
+        {
+            if (binaryTreeNode != null)
+            {
+                var leftCount = Count(binaryTreeNode.Left);
+                var rightCount = Count(binaryTreeNode.Right);
+                return leftCount + rightCount + 1;
+            }
+            return 0;
+        }
+
+        public int Sum(BinaryTreeNode binaryTreeNode)
+        {
+            if (binaryTreeNode != null)
+            {
+                var leftCount = Sum(binaryTreeNode.Left);
+                var rightCount = Sum(binaryTreeNode.Right);
+                return leftCount + rightCount + binaryTreeNode.Data;
+            }
+            return 0;
+        }
+
+        public int CountParentOnlyForDegree2(BinaryTreeNode binaryTreeNode)
+        {
+            if (binaryTreeNode != null)
+            {
+                var leftCount = CountParentOnlyForDegree2(binaryTreeNode.Left);
+                var rightCount = CountParentOnlyForDegree2(binaryTreeNode.Right);
+
+                if (binaryTreeNode.Left != null && binaryTreeNode.Right != null)
+                    return leftCount + rightCount + 1;
+                return leftCount + rightCount;
+            }
+            return 0;
+        }
+
+        public int CalculateHeight(BinaryTreeNode binaryTreeNode)
+        {
+            if (binaryTreeNode != null)
+            {
+                var leftCount = CalculateHeight(binaryTreeNode.Left);
+                var rightCount = CalculateHeight(binaryTreeNode.Right);
+
+                if (leftCount > rightCount)
+                    return leftCount + 1;
+                return rightCount + 1;
+            }
+            return 0;
+        }
     }
 }
