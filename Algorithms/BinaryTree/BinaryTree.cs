@@ -225,5 +225,31 @@ namespace AlgoCSharp.Algorithms.BinaryTree
             }
             return 0;
         }
+
+        public int CountLeafNodes(BinaryTreeNode binaryTreeNode)
+        {
+            if (binaryTreeNode != null)
+            {
+                var leftCount = CountLeafNodes(binaryTreeNode.Left);
+                var rightCount = CountLeafNodes(binaryTreeNode.Right);
+                if (binaryTreeNode.Left == null && binaryTreeNode.Right == null)
+                    return 1;
+                return rightCount + leftCount;
+            }
+            return 0;
+        }
+
+        public int CountNonLeafNodes(BinaryTreeNode binaryTreeNode)
+        {
+            if (binaryTreeNode != null)
+            {
+                var leftCount = CountNonLeafNodes(binaryTreeNode.Left);
+                var rightCount = CountNonLeafNodes(binaryTreeNode.Right);
+                if (binaryTreeNode.Left != null || binaryTreeNode.Right != null)
+                    return leftCount + rightCount + 1;
+                return rightCount + leftCount;
+            }
+            return 0;
+        }
     }
 }

@@ -341,6 +341,13 @@ namespace AlgoCSharp
             //example.DisplayPostOrderIterative(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in level-order iteratively");
             //example.DisplayLevelOrderIterative(binaryTreeRoot);
+            Console.WriteLine("Displaying count, sum, countDeg2, height, leaf nodes, non-leaf nodes of binary tree");
+            Console.WriteLine(example.Count(binaryTreeRoot));
+            Console.WriteLine(example.Sum(binaryTreeRoot));
+            Console.WriteLine(example.CountParentOnlyForDegree2(binaryTreeRoot));
+            Console.WriteLine(example.CalculateHeight(binaryTreeRoot));
+            Console.WriteLine(example.CountLeafNodes(binaryTreeRoot));
+            Console.WriteLine(example.CountNonLeafNodes(binaryTreeRoot));
 
             Console.Read();
         }
