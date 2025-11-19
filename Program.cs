@@ -6,6 +6,7 @@ using AlgoCSharp.Algorithms.QueueADT;
 using AlgoCSharp.Algorithms.StackADT;
 using AlgoCSharp.Algorithms.String;
 using AlgoCSharp.LeetCodeProblems;
+using AlgoCSharp.WarmupProblems;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -16,6 +17,9 @@ namespace AlgoCSharp
     {
         static void Main(string[] args)
         {
+            PatternPrinting patternPrinting = new PatternPrinting();
+            patternPrinting.StarPyramidFromCentre(6);
+
             //var sedolChecker = new SEDOLChecker();
             //sedolChecker.Test();
 
@@ -324,30 +328,30 @@ namespace AlgoCSharp
             //priorityQueue.Dequeue();
             //priorityQueue.Dequeue();
 
-            BinaryTree example = new BinaryTree();
-            var binaryTreeRoot = example.Create();
+            //BinaryTree example = new BinaryTree();
+            //var binaryTreeRoot = example.Create();
 
             //Console.WriteLine("Displaying binary tree in pre-order recursively");
             //example.DisplayPreOrderRecursive(binaryTreeRoot);
-            Console.WriteLine("Displaying binary tree in in-order recursively");
-            example.DisplayInOrderRecursive(binaryTreeRoot);
+            //Console.WriteLine("Displaying binary tree in in-order recursively");
+            //example.DisplayInOrderRecursive(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in post-order recursively");
             //example.DisplayPostOrderRecursive(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in pre-order iteratively");
             //example.DisplayPreOrderIterative(binaryTreeRoot);
-            Console.WriteLine("Displaying binary tree in in-order iteratively");
-            example.DisplayInOrderIterative(binaryTreeRoot);
+            //Console.WriteLine("Displaying binary tree in in-order iteratively");
+            //example.DisplayInOrderIterative(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in post-order iteratively");
             //example.DisplayPostOrderIterative(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in level-order iteratively");
             //example.DisplayLevelOrderIterative(binaryTreeRoot);
-            Console.WriteLine("Displaying count, sum, countDeg2, height, leaf nodes, non-leaf nodes of binary tree");
-            Console.WriteLine(example.Count(binaryTreeRoot));
-            Console.WriteLine(example.Sum(binaryTreeRoot));
-            Console.WriteLine(example.CountParentOnlyForDegree2(binaryTreeRoot));
-            Console.WriteLine(example.CalculateHeight(binaryTreeRoot));
-            Console.WriteLine(example.CountLeafNodes(binaryTreeRoot));
-            Console.WriteLine(example.CountNonLeafNodes(binaryTreeRoot));
+            //Console.WriteLine("Displaying count, sum, countDeg2, height, leaf nodes, non-leaf nodes of binary tree");
+            //Console.WriteLine(example.Count(binaryTreeRoot));
+            //Console.WriteLine(example.Sum(binaryTreeRoot));
+            //Console.WriteLine(example.CountParentOnlyForDegree2(binaryTreeRoot));
+            //Console.WriteLine(example.CalculateHeight(binaryTreeRoot));
+            //Console.WriteLine(example.CountLeafNodes(binaryTreeRoot));
+            //Console.WriteLine(example.CountNonLeafNodes(binaryTreeRoot));
 
             Console.Read();
         }
