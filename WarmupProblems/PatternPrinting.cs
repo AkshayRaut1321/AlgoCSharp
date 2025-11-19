@@ -82,14 +82,13 @@ namespace AlgoCSharp.WarmupProblems
             for (int i = 1; i <= size; i++)
             {
                 stringBuilder.Clear();
-                int spaceLength = size - i;
-                for (int j = 0; j < spaceLength; j++)
+                for (int j = 0; j < size - i - 1; j++)
                 {
                     stringBuilder.Append(" ");
                 }
                 Console.Write(stringBuilder);
                 stringBuilder.Clear();
-                for (int k = 0; k < i; k++)
+                for (int k = 0; k < (2 * i) - 1; k++)
                 {
                     stringBuilder.Append("*");
                 }
