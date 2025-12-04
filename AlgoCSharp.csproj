@@ -51,6 +51,7 @@
     <Compile Include="Algorithms\ArrayADT\UnsortedArrayADT.cs" />
     <Compile Include="Algorithms\ArrayADT\SortedArrayADT.cs" />
     <Compile Include="Algorithms\Array\RemoveInPlaceElement.cs" />
+    <Compile Include="Algorithms\BinaryTree\BinarySearchTree\BinarySearchLinked.cs" />
     <Compile Include="Algorithms\BinaryTree\BinaryTree.cs" />
     <Compile Include="Algorithms\BinaryTree\Node.cs" />
     <Compile Include="Algorithms\CombinationPermutation.cs" />

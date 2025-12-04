@@ -1,6 +1,7 @@
 ﻿using AlgoCSharp.Algorithms;
 using AlgoCSharp.Algorithms.ArrayADT;
 using AlgoCSharp.Algorithms.BinaryTree;
+using AlgoCSharp.Algorithms.BinaryTree.BinarySearchTree;
 using AlgoCSharp.Algorithms.LinkedList;
 using AlgoCSharp.Algorithms.QueueADT;
 using AlgoCSharp.Algorithms.StackADT;
@@ -17,8 +18,8 @@ namespace AlgoCSharp
     {
         static void Main(string[] args)
         {
-            PatternPrinting patternPrinting = new PatternPrinting();
-            patternPrinting.StarPyramidFromCentre(6);
+            //PatternPrinting patternPrinting = new PatternPrinting();
+            //patternPrinting.StarPyramidFromCentre(6);
 
             //var sedolChecker = new SEDOLChecker();
             //sedolChecker.Test();
@@ -328,8 +329,8 @@ namespace AlgoCSharp
             //priorityQueue.Dequeue();
             //priorityQueue.Dequeue();
 
-            //BinaryTree example = new BinaryTree();
-            //var binaryTreeRoot = example.Create();
+            BinaryTree example = new BinaryTree();
+            var binaryTreeRoot = example.Create();
 
             //Console.WriteLine("Displaying binary tree in pre-order recursively");
             //example.DisplayPreOrderRecursive(binaryTreeRoot);
@@ -352,6 +353,12 @@ namespace AlgoCSharp
             //Console.WriteLine(example.CalculateHeight(binaryTreeRoot));
             //Console.WriteLine(example.CountLeafNodes(binaryTreeRoot));
             //Console.WriteLine(example.CountNonLeafNodes(binaryTreeRoot));
+
+            BinarySearchLinked binarySearchLinked = new BinarySearchLinked();
+            var result = binarySearchLinked.IterativeSearch(binaryTreeRoot, 45);
+            Console.WriteLine($"IterativeSearch: {result?.Data}");
+            var result2 = binarySearchLinked.RecursiveSearch(binaryTreeRoot, 55);
+            Console.WriteLine($"RecursiveSearch: {result2?.Data}");
 
             Console.Read();
         }
