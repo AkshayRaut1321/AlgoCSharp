@@ -329,8 +329,8 @@ namespace AlgoCSharp
             //priorityQueue.Dequeue();
             //priorityQueue.Dequeue();
 
-            BinaryTree example = new BinaryTree();
-            var binaryTreeRoot = example.Create();
+            //BinaryTree example = new BinaryTree();
+            //var binaryTreeRoot = example.Create();
 
             //Console.WriteLine("Displaying binary tree in pre-order recursively");
             //example.DisplayPreOrderRecursive(binaryTreeRoot);
@@ -355,10 +355,18 @@ namespace AlgoCSharp
             //Console.WriteLine(example.CountNonLeafNodes(binaryTreeRoot));
 
             BinarySearchLinked binarySearchLinked = new BinarySearchLinked();
-            var result = binarySearchLinked.IterativeSearch(binaryTreeRoot, 45);
-            Console.WriteLine($"IterativeSearch: {result?.Data}");
-            var result2 = binarySearchLinked.RecursiveSearch(binaryTreeRoot, 55);
-            Console.WriteLine($"RecursiveSearch: {result2?.Data}");
+            //var result = binarySearchLinked.IterativeSearch(binaryTreeRoot, 45);
+            //Console.WriteLine($"IterativeSearch: {result?.Data}");
+            //var result2 = binarySearchLinked.RecursiveSearch(binaryTreeRoot, 55);
+            //Console.WriteLine($"RecursiveSearch: {result2?.Data}");
+            binarySearchLinked.Insert(30);
+            binarySearchLinked.Insert(20);
+            binarySearchLinked.Insert(40);
+            binarySearchLinked.Insert(10);
+            binarySearchLinked.Insert(25);
+            binarySearchLinked.Insert(35);
+            var newTreeRoot = binarySearchLinked.Insert(50);
+            Console.WriteLine($"Inserted");
 
             Console.Read();
         }
