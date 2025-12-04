@@ -359,13 +359,21 @@ namespace AlgoCSharp
             //Console.WriteLine($"IterativeSearch: {result?.Data}");
             //var result2 = binarySearchLinked.RecursiveSearch(binaryTreeRoot, 55);
             //Console.WriteLine($"RecursiveSearch: {result2?.Data}");
-            binarySearchLinked.Insert(30);
-            binarySearchLinked.Insert(20);
-            binarySearchLinked.Insert(40);
-            binarySearchLinked.Insert(10);
-            binarySearchLinked.Insert(25);
-            binarySearchLinked.Insert(35);
-            var newTreeRoot = binarySearchLinked.Insert(50);
+            //binarySearchLinked.InsertWithIterativeSearch(30);
+            //binarySearchLinked.InsertWithIterativeSearch(20);
+            //binarySearchLinked.InsertWithIterativeSearch(40);
+            //binarySearchLinked.InsertWithIterativeSearch(10);
+            //binarySearchLinked.InsertWithIterativeSearch(25);
+            //binarySearchLinked.InsertWithIterativeSearch(35);
+            //var newTreeRoot = binarySearchLinked.InsertWithIterativeSearch(50);
+
+            var node = binarySearchLinked.InsertWithRecursiveSearch(null, 30);
+            binarySearchLinked.InsertWithRecursiveSearch(node, 20);
+            binarySearchLinked.InsertWithRecursiveSearch(node, 40);
+            binarySearchLinked.InsertWithRecursiveSearch(node, 10);
+            binarySearchLinked.InsertWithRecursiveSearch(node, 25);
+            binarySearchLinked.InsertWithRecursiveSearch(node, 35);
+            binarySearchLinked.InsertWithRecursiveSearch(node, 50);
             Console.WriteLine($"Inserted");
 
             Console.Read();

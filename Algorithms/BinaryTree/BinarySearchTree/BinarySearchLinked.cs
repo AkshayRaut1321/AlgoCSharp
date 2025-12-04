@@ -64,7 +64,7 @@
             return (null, parent);
         }
 
-        public BinaryTreeNode Insert(int value)
+        public BinaryTreeNode InsertWithIterativeSearch(int value)
         {
             if (Root == null)
                 Root = new BinaryTreeNode(value);
@@ -81,6 +81,20 @@
                 }
             }
             return Root;
+        }
+
+        public BinaryTreeNode InsertWithRecursiveSearch(BinaryTreeNode node, int value)
+        {
+            if (node == null)
+            {
+                node = new BinaryTreeNode(value);
+            }
+            else if (value < node.Data)
+                node.Left = InsertWithRecursiveSearch(node.Left, value);
+            else
+                node.Right = InsertWithRecursiveSearch(node.Right, value);
+
+            return node;
         }
     }
 }
