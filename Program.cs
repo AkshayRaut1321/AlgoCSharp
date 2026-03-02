@@ -367,14 +367,19 @@ namespace AlgoCSharp
             //binarySearchLinked.InsertWithIterativeSearch(35);
             //var newTreeRoot = binarySearchLinked.InsertWithIterativeSearch(50);
 
-            var node = binarySearchLinked.InsertWithRecursiveSearch(null, 30);
-            binarySearchLinked.InsertWithRecursiveSearch(node, 20);
-            binarySearchLinked.InsertWithRecursiveSearch(node, 40);
-            binarySearchLinked.InsertWithRecursiveSearch(node, 10);
-            binarySearchLinked.InsertWithRecursiveSearch(node, 25);
-            binarySearchLinked.InsertWithRecursiveSearch(node, 35);
-            binarySearchLinked.InsertWithRecursiveSearch(node, 50);
+            var root = binarySearchLinked.InsertWithRecursiveSearch(null, 30);
+            binarySearchLinked.InsertWithRecursiveSearch(root, 20);
+            binarySearchLinked.InsertWithRecursiveSearch(root, 40);
+            binarySearchLinked.InsertWithRecursiveSearch(root, 10);
+            binarySearchLinked.InsertWithRecursiveSearch(root, 25);
+            binarySearchLinked.InsertWithRecursiveSearch(root, 35);
+            binarySearchLinked.InsertWithRecursiveSearch(root, 50);
             Console.WriteLine($"Inserted");
+            Console.WriteLine($"Displaying nodes");
+            binarySearchLinked.InOrderDisplay(root);
+
+            Console.WriteLine($"Delete 30");
+            binarySearchLinked.DeleteUsingSuccessor(root, 30);
 
             Console.Read();
         }
