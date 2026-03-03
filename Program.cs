@@ -11,6 +11,7 @@ using AlgoCSharp.WarmupProblems;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace AlgoCSharp
 {
@@ -367,19 +368,31 @@ namespace AlgoCSharp
             //binarySearchLinked.InsertWithIterativeSearch(35);
             //var newTreeRoot = binarySearchLinked.InsertWithIterativeSearch(50);
 
-            var root = binarySearchLinked.InsertWithRecursiveSearch(null, 30);
-            binarySearchLinked.InsertWithRecursiveSearch(root, 20);
-            binarySearchLinked.InsertWithRecursiveSearch(root, 40);
-            binarySearchLinked.InsertWithRecursiveSearch(root, 10);
-            binarySearchLinked.InsertWithRecursiveSearch(root, 25);
-            binarySearchLinked.InsertWithRecursiveSearch(root, 35);
-            binarySearchLinked.InsertWithRecursiveSearch(root, 50);
-            Console.WriteLine($"Inserted");
-            Console.WriteLine($"Displaying nodes");
-            binarySearchLinked.InOrderDisplay(root);
+            //var root = binarySearchLinked.InsertWithRecursiveSearch(null, 30);
+            //binarySearchLinked.InsertWithRecursiveSearch(root, 20);
+            //binarySearchLinked.InsertWithRecursiveSearch(root, 40);
+            //binarySearchLinked.InsertWithRecursiveSearch(root, 10);
+            //binarySearchLinked.InsertWithRecursiveSearch(root, 25);
+            //binarySearchLinked.InsertWithRecursiveSearch(root, 35);
+            //binarySearchLinked.InsertWithRecursiveSearch(root, 50);
+            //Console.WriteLine($"Inserted");
+            //Console.WriteLine($"Displaying nodes");
+            //binarySearchLinked.InOrderDisplay(root);
 
-            Console.WriteLine($"Delete 30");
-            binarySearchLinked.DeleteUsingSuccessor(root, 30);
+            //Console.WriteLine($"Delete 30");
+            //binarySearchLinked.DeleteUsingSuccessor(root, 30);
+
+            List<int> preOrder = new List<int> { 30, 20, 10, 15, 25, 40, 50, 45 };
+            BinaryTreeNode preOrderRoot = binarySearchLinked.BuildFromPreOrder(preOrder);
+            Console.WriteLine("Pre-Order Verification: ");
+            binarySearchLinked.PrintPreOrder(preOrderRoot);
+            Console.WriteLine();
+
+            List<int> postOrder = new List<int> { 15, 10, 25, 20, 45, 50, 40, 30 };
+            BinaryTreeNode postOrderRoot = binarySearchLinked.BuildFromPostOrder(postOrder);
+            Console.WriteLine("Post-Order Verification: ");
+            binarySearchLinked.PrintPostOrder(postOrderRoot);
+            Console.WriteLine();
 
             Console.Read();
         }

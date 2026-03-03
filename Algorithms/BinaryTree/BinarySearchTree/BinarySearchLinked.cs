@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace AlgoCSharp.Algorithms.BinaryTree.BinarySearchTree
@@ -217,6 +218,143 @@ namespace AlgoCSharp.Algorithms.BinaryTree.BinarySearchTree
             while (node.Right != null)
                 node = node.Right;
             return node;
+        }
+
+        public BinaryTreeNode BuildFromPreOrder(List<int> preOrder)
+        {
+            if (preOrder == null || preOrder.Count == 0)
+                return null;
+
+            // Step 1: First element is always the root
+            BinaryTreeNode root = new BinaryTreeNode(preOrder[0]);
+            Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
+
+            // Step 2: Iterate through remaining elements
+            for (int i = 1; i < preOrder.Count; i++)
+            {
+                int current = preOrder[i];
+                BinaryTreeNode newNode = new BinaryTreeNode(current);
+                BinaryTreeNode temp = root;
+
+                // Step 3: Traverse to find correct position
+                while (true)
+                {
+                    if (current < temp.Data)
+                    {
+                        // Go LEFT
+                        if (temp.Left == null)
+                        {
+                            // Found the spot — link as left child
+                            temp.Left = newNode;
+
+                            // Push the PARENT onto stack (left subtree ancestor)
+                            stack.Push(temp);
+
+                            break;
+                        }
+                        else
+                        {
+                            temp = temp.Left;
+                        }
+                    }
+                    else
+                    {
+                        // Go RIGHT
+                        if (temp.Right == null)
+                        {
+                            // Found the spot — link as right child
+                            // Do NOT push onto stack (right subtree)
+                            temp.Right = newNode;
+                            break;
+                        }
+                        else
+                        {
+                            temp = temp.Right;
+                        }
+                    }
+                }
+            }
+
+            return root;
+        }
+
+        // Helper: Pre-Order print to verify
+        public void PrintPreOrder(BinaryTreeNode node)
+        {
+            if (node == null)
+                return;
+            Console.Write(node.Data + " ");
+            PrintPreOrder(node.Left);
+            PrintPreOrder(node.Right);
+        }
+
+        public BinaryTreeNode BuildFromPostOrder(List<int> postOrder)
+        {
+            if (postOrder == null || postOrder.Count == 0)
+                return null;
+
+            // Step 1: Last element is always the root
+            BinaryTreeNode root = new BinaryTreeNode(postOrder[postOrder.Count - 1]);
+            BinaryTreeNode temp = root;
+
+            Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
+
+            // Step 2: Read post-order from RIGHT TO LEFT (skip last element, already root)
+            for (int i = postOrder.Count - 2; i >= 0; i--)
+            {
+                int current = postOrder[i];
+                BinaryTreeNode newNode = new BinaryTreeNode(current);
+                temp = root; // Reset temp to root for each new element
+
+                // Step 3: Traverse to find correct position
+                while (true)
+                {
+                    if (current > temp.Data)
+                    {
+                        // Go RIGHT
+                        if (temp.Right == null)
+                        {
+                            // Found the spot — link as right child
+                            temp.Right = newNode;
+
+                            // Push the PARENT onto stack (right subtree ancestor)
+                            stack.Push(temp);
+
+                            break;
+                        }
+                        else
+                        {
+                            temp = temp.Right;
+                        }
+                    }
+                    else
+                    {
+                        // Go LEFT
+                        if (temp.Left == null)
+                        {
+                            // Found the spot — link as left child
+                            // Do NOT push onto stack (left subtree)
+                            temp.Left = newNode;
+                            break;
+                        }
+                        else
+                        {
+                            temp = temp.Left;
+                        }
+                    }
+                }
+            }
+
+            return root;
+        }
+
+        // Helper: Post-Order print to verify
+        public void PrintPostOrder(BinaryTreeNode node)
+        {
+            if (node == null) return;
+            PrintPostOrder(node.Left);
+            PrintPostOrder(node.Right);
+            Console.Write(node.Data + " ");
         }
     }
 }
