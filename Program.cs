@@ -330,32 +330,37 @@ namespace AlgoCSharp
             //priorityQueue.Dequeue();
             //priorityQueue.Dequeue();
 
-            //BinaryTree example = new BinaryTree();
-            //var binaryTreeRoot = example.Create();
+            BinaryTree binaryTreeEx = new BinaryTree();
+            //var binaryTreeRoot = binaryTreeEx.Create();
 
             //Console.WriteLine("Displaying binary tree in pre-order recursively");
-            //example.DisplayPreOrderRecursive(binaryTreeRoot);
+            //binaryTreeEx.DisplayPreOrderRecursive(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in in-order recursively");
-            //example.DisplayInOrderRecursive(binaryTreeRoot);
+            //binaryTreeEx.DisplayInOrderRecursive(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in post-order recursively");
-            //example.DisplayPostOrderRecursive(binaryTreeRoot);
+            //binaryTreeEx.DisplayPostOrderRecursive(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in pre-order iteratively");
-            //example.DisplayPreOrderIterative(binaryTreeRoot);
+            //binaryTreeEx.DisplayPreOrderIterative(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in in-order iteratively");
-            //example.DisplayInOrderIterative(binaryTreeRoot);
+            //binaryTreeEx.DisplayInOrderIterative(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in post-order iteratively");
-            //example.DisplayPostOrderIterative(binaryTreeRoot);
+            //binaryTreeEx.DisplayPostOrderIterative(binaryTreeRoot);
             //Console.WriteLine("Displaying binary tree in level-order iteratively");
-            //example.DisplayLevelOrderIterative(binaryTreeRoot);
+            //binaryTreeEx.DisplayLevelOrderIterative(binaryTreeRoot);
             //Console.WriteLine("Displaying count, sum, countDeg2, height, leaf nodes, non-leaf nodes of binary tree");
-            //Console.WriteLine(example.Count(binaryTreeRoot));
-            //Console.WriteLine(example.Sum(binaryTreeRoot));
-            //Console.WriteLine(example.CountParentOnlyForDegree2(binaryTreeRoot));
-            //Console.WriteLine(example.CalculateHeight(binaryTreeRoot));
-            //Console.WriteLine(example.CountLeafNodes(binaryTreeRoot));
-            //Console.WriteLine(example.CountNonLeafNodes(binaryTreeRoot));
+            //Console.WriteLine(binaryTreeEx.Count(binaryTreeRoot));
+            //Console.WriteLine(binaryTreeEx.Sum(binaryTreeRoot));
+            //Console.WriteLine(binaryTreeEx.CountParentOnlyForDegree2(binaryTreeRoot));
+            //Console.WriteLine(binaryTreeEx.CalculateHeight(binaryTreeRoot));
+            //Console.WriteLine(binaryTreeEx.CountLeafNodes(binaryTreeRoot));
+            //Console.WriteLine(binaryTreeEx.CountNonLeafNodes(binaryTreeRoot));
+            List<int> preOrder = new List<int> { 4, 7, 9, 6, 3, 2, 5, 8, 1 };
+            List<int> inOrder = new List<int> { 7, 6, 9, 3, 4, 5, 8, 2, 1 };
+            BinaryTreeNode binaryTreeRoot = binaryTreeEx.BuildTree(preOrder, inOrder);
+            Console.WriteLine("Output of Generating Binary Tree using Pre+In order");
+            binaryTreeEx.DisplayInOrderRecursive(binaryTreeRoot);
 
-            BinarySearchLinked binarySearchLinked = new BinarySearchLinked();
+            //BinarySearchLinked binarySearchLinked = new BinarySearchLinked();
             //var result = binarySearchLinked.IterativeSearch(binaryTreeRoot, 45);
             //Console.WriteLine($"IterativeSearch: {result?.Data}");
             //var result2 = binarySearchLinked.RecursiveSearch(binaryTreeRoot, 55);
@@ -382,17 +387,17 @@ namespace AlgoCSharp
             //Console.WriteLine($"Delete 30");
             //binarySearchLinked.DeleteUsingSuccessor(root, 30);
 
-            List<int> preOrder = new List<int> { 30, 20, 10, 15, 25, 40, 50, 45 };
-            BinaryTreeNode preOrderRoot = binarySearchLinked.BuildFromPreOrder(preOrder);
-            Console.WriteLine("Pre-Order Verification: ");
-            binarySearchLinked.PrintPreOrder(preOrderRoot);
-            Console.WriteLine();
+            //List<int> preOrder = new List<int> { 30, 20, 10, 15, 25, 40, 50, 45 };
+            //BinaryTreeNode preOrderRoot = binarySearchLinked.BuildFromPreOrder(preOrder);
+            //Console.WriteLine("Pre-Order Verification: ");
+            //binarySearchLinked.PrintPreOrder(preOrderRoot);
+            //Console.WriteLine();
 
-            List<int> postOrder = new List<int> { 15, 10, 25, 20, 45, 50, 40, 30 };
-            BinaryTreeNode postOrderRoot = binarySearchLinked.BuildFromPostOrder(postOrder);
-            Console.WriteLine("Post-Order Verification: ");
-            binarySearchLinked.PrintPostOrder(postOrderRoot);
-            Console.WriteLine();
+            //List<int> postOrder = new List<int> { 15, 10, 25, 20, 45, 50, 40, 30 };
+            //BinaryTreeNode postOrderRoot = binarySearchLinked.BuildFromPostOrder(postOrder);
+            //Console.WriteLine("Post-Order Verification: ");
+            //binarySearchLinked.PrintPostOrder(postOrderRoot);
+            //Console.WriteLine();
 
             Console.Read();
         }

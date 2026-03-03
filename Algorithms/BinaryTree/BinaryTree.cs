@@ -1,6 +1,7 @@
 ﻿using AlgoCSharp.Algorithms.QueueADT;
 using AlgoCSharp.Algorithms.StackADT;
 using System;
+using System.Collections.Generic;
 
 namespace AlgoCSharp.Algorithms.BinaryTree
 {
@@ -250,6 +251,69 @@ namespace AlgoCSharp.Algorithms.BinaryTree
                 return rightCount + leftCount;
             }
             return 0;
+        }
+
+        public BinaryTreeNode BuildTree(List<int> preOrder, List<int> inOrder)
+        {
+            // BASE CASE
+            // If either list is empty, there is nothing to build
+            if (preOrder.Count == 0 || inOrder.Count == 0)
+                return null;
+
+            // STEP 1 — The first element of preOrder is always the current root
+            int rootValue = preOrder[0];
+            BinaryTreeNode root = new BinaryTreeNode(rootValue);
+
+            // STEP 2 — Find the root's position in inOrder
+            // Everything to its LEFT  → left subtree
+            // Everything to its RIGHT → right subtree
+            int rootIndexInInOrder = -1;
+
+            for (int i = 0; i < inOrder.Count; i++)
+            {
+                if (inOrder[i] == rootValue)
+                {
+                    rootIndexInInOrder = i;
+                    break;
+                }
+            }
+
+            // STEP 3 — Slice the inOrder into left and right portions
+            // Left inOrder  → indices 0 to rootIndex - 1
+            // Right inOrder → indices rootIndex + 1 to end
+            List<int> leftInOrder = new List<int>();
+            List<int> rightInOrder = new List<int>();
+
+            for (int i = 0; i < rootIndexInInOrder; i++)
+                leftInOrder.Add(inOrder[i]);
+
+            for (int i = rootIndexInInOrder + 1; i < inOrder.Count; i++)
+                rightInOrder.Add(inOrder[i]);
+
+            // STEP 4 — Slice the preOrder into left and right portions
+            // We know how many nodes are in the left subtree
+            // from the leftInOrder count, so we use that as the size
+            // Left preOrder  → indices 1 to leftInOrder.Count  (skip index 0, that was the root)
+            // Right preOrder → indices leftInOrder.Count + 1 to end
+            int leftSubtreeSize = leftInOrder.Count;
+
+            List<int> leftPreOrder = new List<int>();
+            List<int> rightPreOrder = new List<int>();
+
+            for (int i = 1; i <= leftSubtreeSize; i++)
+                leftPreOrder.Add(preOrder[i]);
+
+            for (int i = leftSubtreeSize + 1; i < preOrder.Count; i++)
+                rightPreOrder.Add(preOrder[i]);
+
+            // STEP 5 — Recurse
+            // Build the left subtree using left slices
+            // Build the right subtree using right slices
+            root.Left = BuildTree(leftPreOrder, leftInOrder);
+            root.Right = BuildTree(rightPreOrder, rightInOrder);
+
+            // STEP 6 — Return the fully constructed root
+            return root;
         }
     }
 }
