@@ -1,4 +1,4 @@
-﻿using AlgoCSharp.Algorithms.StackADT;
+﻿using AlgoCSharp.DataStructures.StackADT;
 
 namespace AlgoCSharp.LeetCodeProblems
 {

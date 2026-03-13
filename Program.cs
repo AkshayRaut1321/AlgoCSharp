@@ -1,10 +1,10 @@
 ﻿using AlgoCSharp.Algorithms;
 using AlgoCSharp.Algorithms.ArrayADT;
-using AlgoCSharp.Algorithms.BinaryTree;
-using AlgoCSharp.Algorithms.BinaryTree.BinarySearchTree;
-using AlgoCSharp.Algorithms.LinkedList;
-using AlgoCSharp.Algorithms.QueueADT;
-using AlgoCSharp.Algorithms.StackADT;
+using AlgoCSharp.DataStructures.BinaryTree;
+using AlgoCSharp.DataStructures.BinaryTree.BinarySearchTree;
+using AlgoCSharp.DataStructures.LinkedList;
+using AlgoCSharp.DataStructures.QueueADT;
+using AlgoCSharp.DataStructures.StackADT;
 using AlgoCSharp.Algorithms.String;
 using AlgoCSharp.LeetCodeProblems;
 using AlgoCSharp.WarmupProblems;
@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using AlgoCSharp.DataStructures.BinaryTree.BinarySearchTree.AVLTree;
 
 namespace AlgoCSharp
 {
@@ -330,7 +331,7 @@ namespace AlgoCSharp
             //priorityQueue.Dequeue();
             //priorityQueue.Dequeue();
 
-            BinaryTree binaryTreeEx = new BinaryTree();
+            //BinaryTree binaryTreeEx = new BinaryTree();
             //var binaryTreeRoot = binaryTreeEx.Create();
 
             //Console.WriteLine("Displaying binary tree in pre-order recursively");
@@ -353,12 +354,12 @@ namespace AlgoCSharp
             //Console.WriteLine(binaryTreeEx.CountParentOnlyForDegree2(binaryTreeRoot));
             //Console.WriteLine(binaryTreeEx.CalculateHeight(binaryTreeRoot));
             //Console.WriteLine(binaryTreeEx.CountLeafNodes(binaryTreeRoot));
-            //Console.WriteLine(binaryTreeEx.CountNonLeafNodes(binaryTreeRoot));
-            List<int> preOrder = new List<int> { 4, 7, 9, 6, 3, 2, 5, 8, 1 };
-            List<int> inOrder = new List<int> { 7, 6, 9, 3, 4, 5, 8, 2, 1 };
-            BinaryTreeNode binaryTreeRoot = binaryTreeEx.BuildTree(preOrder, inOrder);
-            Console.WriteLine("Output of Generating Binary Tree using Pre+In order");
-            binaryTreeEx.DisplayInOrderRecursive(binaryTreeRoot);
+            ////Console.WriteLine(binaryTreeEx.CountNonLeafNodes(binaryTreeRoot));
+            //List<int> preOrder = new List<int> { 4, 7, 9, 6, 3, 2, 5, 8, 1 };
+            //List<int> inOrder = new List<int> { 7, 6, 9, 3, 4, 5, 8, 2, 1 };
+            //BinaryTreeNode binaryTreeRoot = binaryTreeEx.BuildTree(preOrder, inOrder);
+            //Console.WriteLine("Output of Generating Binary Tree using Pre+In order");
+            //binaryTreeEx.DisplayInOrderRecursive(binaryTreeRoot);
 
             //BinarySearchLinked binarySearchLinked = new BinarySearchLinked();
             //var result = binarySearchLinked.IterativeSearch(binaryTreeRoot, 45);
@@ -398,6 +399,13 @@ namespace AlgoCSharp
             //Console.WriteLine("Post-Order Verification: ");
             //binarySearchLinked.PrintPostOrder(postOrderRoot);
             //Console.WriteLine();
+
+            AVLTree avlTree = new AVLTree();
+            var avlRoot = avlTree.Insert(null, 10);
+            avlRoot = avlTree.Insert(avlRoot, 20);
+            avlRoot = avlTree.Insert(avlRoot, 30);
+            avlRoot = avlTree.Insert(avlRoot, 40);
+            avlTree.PrintTree(avlRoot);
 
             Console.Read();
         }
