@@ -5,9 +5,33 @@ namespace AlgoCSharp.Algorithms
     /// <summary>
     /// Greedy, two pointers, sliding window
     /// </summary>
-    public class BestTimeToBuySellStock
+    public class _121BestTimeToBuySellStock
     {
-        public int MaxProfit(int[] prices)
+        public int MaxProfitOptimalGreedy(int[] prices)
+        {
+            int minPrice = prices[0];
+            int maxProfit = 0;
+
+            for (int i = 1; i < prices.Length; i++)
+            {
+                if (prices[i] < minPrice)
+                {
+                    minPrice = prices[i]; // new lowest buy price
+                }
+                else
+                {
+                    int profit = prices[i] - minPrice;
+                    if (profit > maxProfit)
+                    {
+                        maxProfit = profit;
+                    }
+                }
+            }
+
+            return maxProfit;
+        }
+
+        public int MaxProfitTwoPointers(int[] prices)
         {
             int buyIndex = 0;
             int sellIndex = 1;
@@ -57,34 +81,11 @@ namespace AlgoCSharp.Algorithms
             return maxProfit;
         }
 
-        public int MaxProfitOptimal(int[] prices)
-        {
-            int minPrice = prices[0];
-            int maxProfit = 0;
-
-            for (int i = 1; i < prices.Length; i++)
-            {
-                if (prices[i] < minPrice)
-                {
-                    minPrice = prices[i]; // new lowest buy price
-                }
-                else
-                {
-                    int profit = prices[i] - minPrice;
-                    if (profit > maxProfit)
-                    {
-                        maxProfit = profit;
-                    }
-                }
-            }
-
-            return maxProfit;
-        }
-
         public int MaxProfitDynamicProgramming(int[] prices)
         {
             int n = prices.Length;
-            if (n == 0) return 0;
+            if (n == 0)
+                return 0;
 
             int[] dp = new int[n];
             int minPrice = prices[0];

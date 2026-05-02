@@ -79,7 +79,11 @@
     <Compile Include="DataStructures\StackADT\StackArrayADT.cs" />
     <Compile Include="Algorithms\String\StringNeedleHaystack.cs" />
     <Compile Include="Algorithms\String\StringPalindrome.cs" />
-    <Compile Include="LeetCodeProblems\BestTimeToBuySellStock.cs" />
+    <Compile Include="LeetCodeProblems\1606FindServersThatHandledMostNumberofRequests.cs" />
+    <Compile Include="LeetCodeProblems\1TwoSum.cs" />
+    <Compile Include="LeetCodeProblems\242ValidAnagramWithUnicode.cs" />
+    <Compile Include="LeetCodeProblems\_121BestTimeToBuySellStock.cs" />
+    <Compile Include="LeetCodeProblems\KadaneAlgorithm.cs" />
     <Compile Include="LeetCodeProblems\LongestCommonPrefix.cs" />
     <Compile Include="Algorithms\Multithreading\TaskParallelism.cs" />
     <Compile Include="LeetCodeProblems\NumberPalindrome.cs" />
@@ -94,6 +98,7 @@
     <Compile Include="LeetCodeProblems\SearchInsertPositionInSortedArray.cs" />
     <Compile Include="LeetCodeProblems\ValidParenthesesOnlyRound.cs" />
     <Compile Include="LeetCodeProblems\ValidParenthesesMixed.cs" />
+    <Compile Include="LeetCodeProblems\WordFrequencies.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Algorithms\TaylorSeries.cs" />

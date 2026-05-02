@@ -400,12 +400,22 @@ namespace AlgoCSharp
             //binarySearchLinked.PrintPostOrder(postOrderRoot);
             //Console.WriteLine();
 
-            AVLTree avlTree = new AVLTree();
-            var avlRoot = avlTree.Insert(null, 10);
-            avlRoot = avlTree.Insert(avlRoot, 20);
-            avlRoot = avlTree.Insert(avlRoot, 30);
-            avlRoot = avlTree.Insert(avlRoot, 40);
-            avlTree.PrintTree(avlRoot);
+            //AVLTree avlTree = new AVLTree();
+            //var avlRoot = avlTree.Insert(null, 10);
+            //avlRoot = avlTree.Insert(avlRoot, 20);
+            //avlRoot = avlTree.Insert(avlRoot, 30);
+            //avlRoot = avlTree.Insert(avlRoot, 40);
+            //avlTree.PrintTree(avlRoot);
+
+            //KadaneAlgorithm kadane = new KadaneAlgorithm();
+            //kadane.MaxSubarraySum(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 });
+
+            /* ------------- INCORRECT SOLUTION Leet Code 1606 ---------------*/
+            //var lc = new _1606FindServersThatHandledMostNumberofRequests();
+            //var busiestServers = lc.BusiestServers(3, new int[] { 1, 2, 3, 4, 5 }, new int[] { 5, 2, 3, 3, 3 });
+
+            var wordFrequencies = new WordFrequencies();
+            var result = wordFrequencies.GetAlphabeticalFrequencies("the day is sunny the the");
 
             Console.Read();
         }
